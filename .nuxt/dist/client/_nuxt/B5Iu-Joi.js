@@ -1,0 +1,1 @@
+import{c as t,b as a,w as o,a as s,e as r,o as n,d as c}from"./DI2AV8va.js";import{u as _}from"./CM3Yo3QC.js";const l={class:"kapcsolat"},d=s("h2",null,"Partnerek",-1),x={__name:"partnerek",setup(p){return _({title:"Partnerek"}),(i,u)=>{const e=r;return n(),t("div",l,[d,a(e,{to:"/"},{default:o(()=>[c("Vissza a Főoldalra")]),_:1})])}}};export{x as default};
