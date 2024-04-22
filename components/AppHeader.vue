@@ -14,17 +14,8 @@ const isMenuOpen = ref(false)
 
 <template>
   <header class="header">
-    <div class="header-content d-flex">
-      <div class="logo-box header-content__logo-box">
-        <a href="/" class="header-content__logo-box__link">
-          <img
-            src="/img/header/logo.svg"
-            alt="Biztos Alkuszom"
-            class="header-content__logo-box__link__img"
-          />
-        </a>
-      </div>
-      <div class="nav-box header-content__nav-box d-flex">
+    <div class="header-content">
+      <div class="nav-box header-content__nav-box">
         <button
           @click="isMenuOpen = !isMenuOpen"
           class="hamburger"
