@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/app.css'],
+
   app: {
     head: {
       title: 'Biztos Alkuszom',
@@ -35,4 +36,6 @@ export default defineNuxtConfig({
       ],
     },
   },
+
+  modules: ["@nuxt/image"]
 })

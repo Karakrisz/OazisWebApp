@@ -14,6 +14,47 @@ const isMenuOpen = ref(false)
 
 <template>
   <header class="header">
+    <div class="header__up-box">
+      <a class="header__up-box__link f-400" href="tel:+36704266794">
+        <NuxtImg
+          class="header__up-box__link__img"
+          src="/img/header/mobile.svg"
+        />
+        +36 70 426 67 94
+      </a>
+      <a
+        class="header__up-box__link f-400"
+        href="mailto:fuggonyoazis@gmail.com"
+      >
+        <NuxtImg class="header__up-box__link__img" src="/img/header/mail.svg" />
+        fuggonyoazis@gmail.com
+      </a>
+    </div>
+    <div class="header-logo-user-box d-flex">
+      <div class="header-logo-user-box__img-box">
+        <NuxtImg
+          class="header-logo-user-box__img-box__img"
+          src="/img/header/logo.svg"
+        />
+      </div>
+      <div class="header-logo-user-box__search-box">kereső</div>
+      <div class="header-logo-user-box__login-box">
+        <a class="header-logo-user-box__login-box__link" href="">
+          <NuxtImg
+            class="header-logo-user-box__img-box__img"
+            src="/img/header/user.svg"
+          />
+          Bejelentkezés
+        </a>
+        <a class="header-logo-user-box__login-box__link" href="">
+          <NuxtImg
+            class="header-logo-user-box__img-box__img"
+            src="/img/header/basket.svg"
+          />
+          13
+        </a>
+      </div>
+    </div>
     <div class="header-content">
       <div class="nav-box header-content__nav-box">
         <button
@@ -31,7 +72,7 @@ const isMenuOpen = ref(false)
               <NuxtLink
                 :to="link.path"
                 :class="[
-                  'menu__item text-color text-transform-uppercase',
+                  'menu__item text-color text-transform-uppercase f-500',
                   { 'menu__item--border-left': link.path === '/' },
                 ]"
               >

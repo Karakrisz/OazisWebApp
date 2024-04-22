@@ -136,6 +136,14 @@ ul {
   color: #fff;
 }
 
+.f-400 {
+  font-weight: 400;
+}
+
+.f-500 {
+  font-weight: 500;
+}
+
 .linear-font {
   background: linear-gradient(100deg, #001647, #155b9b, #001647);
   -webkit-background-clip: text;
@@ -168,6 +176,24 @@ ul {
 
 /********************  Header formating start **********************/
 
+.header__up-box {
+  background: #f8faee;
+  padding: 0.5em 5em;
+}
+
+.header__up-box__link__img {
+  width: 1em;
+  height: 0.8em;
+}
+
+.header__up-box__link {
+  color: #0a1310;
+}
+
+.header-logo-user-box {
+  background: #1c362b;
+}
+
 .header-content {
   padding: 0 5em;
   background: #4b6752;
@@ -175,7 +201,7 @@ ul {
 
 .menu__list {
   padding: 0.7em 0;
-  margin: -1.3em 0 0 0;
+  margin: -1.2em 0 0 0;
   justify-content: space-between;
 }
 
