@@ -144,6 +144,10 @@ ul {
   font-weight: 500;
 }
 
+.f-600 {
+  font-weight: 500;
+}
+
 .linear-font {
   background: linear-gradient(100deg, #001647, #155b9b, #001647);
   -webkit-background-clip: text;
@@ -172,6 +176,20 @@ ul {
 
 /********************  Identical instructions start **********************/
 
+.header-logo-user-box__search-box__input {
+  width: 100%;
+}
+
+.header-logo-user-box__search-box__input,
+.header-logo-user-box__login-box__link {
+  background: #fbfadd;
+  border-radius: 2em;
+}
+
+.header-logo-user-box__login-box__link {
+  color: #000;
+}
+
 /********************  Identical instructions end **********************/
 
 /********************  Header formating start **********************/
@@ -190,8 +208,40 @@ ul {
   color: #0a1310;
 }
 
+.header__up-box__link--margin {
+  margin-right: 2.5em;
+}
+
 .header-logo-user-box {
   background: #1c362b;
+  padding: 1em 5em;
+  align-items: center;
+}
+
+.header-logo-user-box__search-box__input {
+  padding: 1em;
+  border: 0;
+}
+
+.header-logo-user-box__img-box__img {
+  width: 35%;
+}
+
+.header-logo-user-box__search-box {
+  margin-left: -45%;
+}
+
+.header-logo-user-box__login-box__link {
+  padding: 0.7em 1em;
+}
+
+.header-logo-user-box__login-box__link--margin {
+  margin-left: 1.3em;
+}
+
+.header-logo-user-box__login-box__link__img {
+  width: 1em;
+  height: 1em;
 }
 
 .header-content {

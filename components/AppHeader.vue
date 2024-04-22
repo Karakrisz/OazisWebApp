@@ -15,7 +15,10 @@ const isMenuOpen = ref(false)
 <template>
   <header class="header">
     <div class="header__up-box">
-      <a class="header__up-box__link f-400" href="tel:+36704266794">
+      <a
+        class="header__up-box__link header__up-box__link--margin f-400"
+        href="tel:+36704266794"
+      >
         <NuxtImg
           class="header__up-box__link__img"
           src="/img/header/mobile.svg"
@@ -30,28 +33,36 @@ const isMenuOpen = ref(false)
         fuggonyoazis@gmail.com
       </a>
     </div>
-    <div class="header-logo-user-box d-flex">
+    <div class="header-logo-user-box grid-3">
       <div class="header-logo-user-box__img-box">
         <NuxtImg
           class="header-logo-user-box__img-box__img"
           src="/img/header/logo.svg"
         />
       </div>
-      <div class="header-logo-user-box__search-box">kereső</div>
-      <div class="header-logo-user-box__login-box">
-        <a class="header-logo-user-box__login-box__link" href="">
+      <div class="header-logo-user-box__search-box">
+        <input
+          class="header-logo-user-box__search-box__input"
+          placeholder="Keresés a termékek között"
+        />
+      </div>
+      <div class="header-logo-user-box__login-box t-end">
+        <a class="header-logo-user-box__login-box__link" href="#">
+          Bejelentkezés
           <NuxtImg
-            class="header-logo-user-box__img-box__img"
+            class="header-logo-user-box__login-box__link__img"
             src="/img/header/user.svg"
           />
-          Bejelentkezés
         </a>
-        <a class="header-logo-user-box__login-box__link" href="">
+        <a
+          class="header-logo-user-box__login-box__link header-logo-user-box__login-box__link--margin f-600"
+          href="#"
+        >
+          13
           <NuxtImg
-            class="header-logo-user-box__img-box__img"
+            class="header-logo-user-box__login-box__link__img"
             src="/img/header/basket.svg"
           />
-          13
         </a>
       </div>
     </div>
