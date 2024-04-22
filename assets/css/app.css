@@ -223,6 +223,12 @@ ul {
   border: 0;
 }
 
+.header-logo-user-box__search-box__img {
+  top: .45em;
+  right: 1em;
+  width: 1.7em;
+}
+
 .header-logo-user-box__img-box__img {
   width: 35%;
 }

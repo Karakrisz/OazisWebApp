@@ -40,7 +40,11 @@ const isMenuOpen = ref(false)
           src="/img/header/logo.svg"
         />
       </div>
-      <div class="header-logo-user-box__search-box">
+      <div class="header-logo-user-box__search-box position-relative">
+        <NuxtImg
+          class="header-logo-user-box__search-box__img position-absolute"
+          src="/img/header/search.svg"
+        />
         <input
           class="header-logo-user-box__search-box__input"
           placeholder="Keresés a termékek között"
