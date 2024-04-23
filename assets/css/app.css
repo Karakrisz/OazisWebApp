@@ -287,7 +287,40 @@ ul {
 /********************  Header formating end **********************/
 
 /********************  Slider formating start **********************/
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px; /* Szükség szerint állítható */
+  margin: auto;
+}
 
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%; /* Minden elem teljes szélességet kap */
+  /* További stílusok */
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
 /********************  Slider formating end **********************/
 
 /********************  Products formating start **********************/
