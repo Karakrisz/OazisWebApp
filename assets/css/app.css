@@ -180,6 +180,12 @@ ul {
 
 /********************  Identical instructions start **********************/
 
+.header-logo-user-box,
+.counter,
+.counter__input {
+  align-items: center;
+}
+
 .header-logo-user-box__search-box__input,
 .slider-content__img {
   width: 100%;
@@ -228,7 +234,6 @@ ul {
 .header-logo-user-box {
   background: #1c362b;
   padding: 1em 5em;
-  align-items: center;
 }
 
 .header-logo-user-box__search-box__input {
@@ -290,21 +295,6 @@ ul {
 .products-content {
   padding: 0 5em;
   margin-top: -0.2em;
-}
-
-.counter {
-  display: flex;
-  align-items: center;
-}
-
-.counter > button {
-  width: 30px; 
-  height: 30px; 
-}
-
-.counter > input {
-  width: 50px; 
-  text-align: center; 
 }
 
 /********************  Products formating end **********************/

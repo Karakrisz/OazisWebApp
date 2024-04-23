@@ -38,10 +38,10 @@ const decrement = () => {
         >
           KIEMELT AJÁNLATOK
         </h2>
-        <div class="counter">
-          <button @click="decrement">-</button>
-          <input type="text" :value="quantityDisplay" readonly />
-          <button @click="increment">+</button>
+        <div class="counter d-flex">
+          <button class="counter__btn" @click="decrement">-</button>
+          <input class="counter__input" type="text" :value="quantityDisplay" readonly />
+          <button class="counter__btn" @click="increment">+</button>
         </div>
       </div>
     </section>
