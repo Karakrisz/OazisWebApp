@@ -199,7 +199,8 @@ ul {
 }
 
 .header-logo-user-box__search-box__input,
-.header-logo-user-box__login-box__link {
+.header-logo-user-box__login-box__link,
+.carousel-item__NuxtLink {
   background: #fbfadd;
   border-radius: 2em;
 }
@@ -309,16 +310,7 @@ ul {
 }
 
 .carousel-control {
-  bottom: 0;
   cursor: pointer;
-}
-
-.carousel-control--left {
-  left: 0;
-}
-
-.carousel-control--right {
-  right: 0;
 }
 
 .slider-content__carousel-content {
@@ -326,6 +318,14 @@ ul {
   right: 5%;
   width: 33em;
   padding: 1.3em;
+}
+
+.carousel__btn-content {
+  justify-content: end;
+}
+
+.carousel-item__NuxtLink {
+  padding: .5em 1.5em;
 }
 
 /********************  Slider formating end **********************/

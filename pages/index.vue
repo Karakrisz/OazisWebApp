@@ -7,18 +7,21 @@ const sliderElem = ref([
     description:
       'Minden termékünket kizárólag első osztályú szövetek felhasználásával készítjük, így garantálva otthona számára a stílus és minőség tökéletes harmóniáját. Válasszon boltunkat, ahol a kifinomultság és tartósság találkozik, hogy otthonát a lehető legjobban kiegészíthesse.',
     button: 'TOVÁBB',
+    number: '1 / 3',
   },
   {
     title: 'KIZÁRÓLAG PRÉMIUM ALAPANYOGOKBÓL DOLGOZUNK',
     description:
       'Minden termékünket kizárólag első osztályú szövetek felhasználásával készítjük, így garantálva otthona számára a stílus és minőség tökéletes harmóniáját. Válasszon boltunkat, ahol a kifinomultság és tartósság találkozik, hogy otthonát a lehető legjobban kiegészíthesse.',
     button: 'TOVÁBB',
+    number: '2 / 3',
   },
   {
     title: 'KIZÁRÓLAG PRÉMIUM ALAPANYOGOKBÓL DOLGOZUNK',
     description:
       'Minden termékünket kizárólag első osztályú szövetek felhasználásával készítjük, így garantálva otthona számára a stílus és minőség tökéletes harmóniáját. Válasszon boltunkat, ahol a kifinomultság és tartósság találkozik, hogy otthonát a lehető legjobban kiegészíthesse.',
     button: 'TOVÁBB',
+    number: '3 / 3',
   },
 ])
 
@@ -96,26 +99,25 @@ const decrement = () => {
                 <NuxtLink class="carousel-item__NuxtLink f-300">{{
                   item.button
                 }}</NuxtLink>
+                <div class="carousel__btn-content d-flex">
+                  <button class="carousel__btn-content__btn" @click="prevSlide">
+                    <NuxtImg
+                      class="carousel__btn-content__btn__img"
+                      src="/img/slider/a-left.svg"
+                    />
+                  </button>
+                  <p class="carousel__btn-content__p text-color f-300">
+                    {{ item.number }}
+                  </p>
+                  <button class="carousel__btn-content__btn" @click="nextSlide">
+                    <NuxtImg
+                      class="carousel__btn-content__btn__img"
+                      src="/img/slider/a-right.svg"
+                    />
+                  </button>
+                </div>
               </div>
             </div>
-            <button
-              class="carousel-control position-absolute carousel-control--left"
-              @click="prevSlide"
-            >
-              <NuxtImg
-                class="slider-content__img"
-                src="/img/slider/a-left.svg"
-              />
-            </button>
-            <button
-              class="carousel-control position-absolute carousel-control--right"
-              @click="nextSlide"
-            >
-              <NuxtImg
-                class="slider-content__img"
-                src="/img/slider/a-right.svg"
-              />
-            </button>
           </div>
         </div>
       </div>
