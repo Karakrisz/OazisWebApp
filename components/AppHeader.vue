@@ -88,7 +88,6 @@ const isMenuOpen = ref(false)
                 :to="link.path"
                 :class="[
                   'menu__item text-color text-transform-uppercase f-500',
-                  { 'menu__item--border-left': link.path === '/' },
                 ]"
               >
                 <template v-if="link.imagePath">
