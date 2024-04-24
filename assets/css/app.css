@@ -41,7 +41,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   margin: 0;
 }
 
@@ -195,7 +196,8 @@ ul {
 }
 
 .header-logo-user-box,
-.navigation-content__link-content__div {
+.navigation-content__link-content__div,
+.form-content {
   background: #1c362b;
 }
 
@@ -207,11 +209,15 @@ ul {
 
 .header-logo-user-box__search-box__input,
 .slider-content__img,
-.carousel-container {
+.carousel-container,
+.form-content__img-content__img,
+.form-group__input,
+.form-group__textarea {
   width: 100%;
 }
 
-.products-content__link-content__NuxtLink {
+.products-content__link-content__NuxtLink,
+.contact-form__btn-box__btn {
   background: #1c362b;
 }
 
@@ -224,7 +230,8 @@ ul {
 .header-logo-user-box__search-box__input,
 .header-logo-user-box__login-box__link,
 .carousel-item__NuxtLink,
-.products-content__link-content__NuxtLink {
+.products-content__link-content__NuxtLink,
+.contact-form__btn-box__btn {
   border-radius: 2em;
 }
 
@@ -241,7 +248,8 @@ ul {
 }
 
 .carousel-item__NuxtLink,
-.products-content__link-content__NuxtLink {
+.products-content__link-content__NuxtLink,
+.contact-form__btn-box__btn {
   padding: 0.5em 1.5em;
 }
 
@@ -370,7 +378,12 @@ ul {
 /********************  Navigation formating start **********************/
 
 .navigation-content {
-  padding: 0 5em;
+  padding: 0 5em 13em 5em;
+}
+
+.form-content__form-img-content {
+  padding: 0 5em 0 5em;
+  bottom: 8em;
 }
 
 .navigation-content__link-content__div {
@@ -383,6 +396,28 @@ ul {
 
 .navigation-content__link-content__div__img {
   width: 27%;
+}
+
+.form-group__input,
+.form-group__textarea {
+  border: 1px solid #1c362b;
+  margin: 1em 0;
+  padding: 1em;
+}
+
+.contact-form {
+  padding: 2.5em;
+  border: 1px solid;
+  margin: 1.7em;
+  max-height: 92%;
+}
+
+.form-content__form-img-content__div {
+  height: 42.7em;
+}
+
+.form-content__img-content__img {
+  height: 100%;
 }
 
 /********************  Navigation formating end **********************/
