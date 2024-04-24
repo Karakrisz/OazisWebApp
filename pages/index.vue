@@ -72,12 +72,26 @@ const decrement = () => {
 //    console.log(quantity.value)
 //    updateCart(quantity.value);
 // }
+
+const form = ref({
+  firstname: '',
+  lastname: '',
+  email: '',
+  phonenumber: '',
+  message: '',
+})
+
+const sendEmail = () => console.log(form.value)
 </script>
 <template>
   <div>
     <section>
       <div class="slider-content position-relative">
-        <NuxtImg class="slider-content__img" src="/img/slider/slider.webp" />
+        <NuxtImg
+          class="slider-content__img"
+          src="/img/slider/slider.webp"
+          alt="Függöny Oázis"
+        />
         <div class="slider-content__carousel-content position-absolute">
           <div class="carousel position-relative">
             <div
@@ -104,6 +118,7 @@ const decrement = () => {
                     <NuxtImg
                       class="carousel__btn-content__btn__img"
                       src="/img/slider/a-left.svg"
+                      alt="Függöny Oázis"
                     />
                   </button>
                   <p class="carousel__btn-content__p text-color f-300">
@@ -113,6 +128,7 @@ const decrement = () => {
                     <NuxtImg
                       class="carousel__btn-content__btn__img"
                       src="/img/slider/a-right.svg"
+                      alt="Függöny Oázis"
                     />
                   </button>
                 </div>
@@ -140,7 +156,163 @@ const decrement = () => {
           />
           <button class="counter__btn" @click="increment">+</button>
         </div>
+        <div class="products-content__link-content text-center">
+          <NuxtLink
+            class="products-content__link-content__NuxtLink text-color-w"
+          >
+            ÖSSZES AJÁNLAT MEGTEKINTÉSE
+          </NuxtLink>
+        </div>
       </div>
+    </section>
+    <section>
+      <div class="navigation-content">
+        <h3
+          class="navigation-content__h3 text-transform-uppercase f-300 text-center"
+        >
+          KERESSEN SZOBA SZERINT
+        </h3>
+
+        <div class="navigation-content__link-content grid-6">
+          <div class="navigation-content__link-content__div text-center">
+            <NuxtImg
+              class="navigation-content__link-content__div__img"
+              src="/img/navigation/furdo.svg"
+              alt="Függöny Oázis"
+            />
+            <h4 class="navigation-content__link-content__div__h4 text-color-w">
+              FÜRDŐSZOBA
+            </h4>
+          </div>
+
+          <div class="navigation-content__link-content__div text-center">
+            <NuxtImg
+              class="navigation-content__link-content__div__img"
+              src="/img/navigation/halo.svg"
+              alt="Függöny Oázis"
+            />
+            <h4 class="navigation-content__link-content__div__h4 text-color-w">
+              HÁLÓSZOBA
+            </h4>
+          </div>
+
+          <div class="navigation-content__link-content__div text-center">
+            <NuxtImg
+              class="navigation-content__link-content__div__img"
+              src="/img/navigation/nappali.svg"
+              alt="Függöny Oázis"
+            />
+            <h4 class="navigation-content__link-content__div__h4 text-color-w">
+              NAPPALI
+            </h4>
+          </div>
+
+          <div class="navigation-content__link-content__div text-center">
+            <NuxtImg
+              class="navigation-content__link-content__div__img"
+              src="/img/navigation/konyha.svg"
+              alt="Függöny Oázis"
+            />
+            <h4 class="navigation-content__link-content__div__h4 text-color-w">
+              KONYHA
+            </h4>
+          </div>
+
+          <div class="navigation-content__link-content__div text-center">
+            <NuxtImg
+              class="navigation-content__link-content__div__img"
+              src="/img/navigation/iroda.svg"
+              alt="Függöny Oázis"
+            />
+            <h4 class="navigation-content__link-content__div__h4 text-color-w">
+              IRODA
+            </h4>
+          </div>
+
+          <div class="navigation-content__link-content__div text-center">
+            <NuxtImg
+              class="navigation-content__link-content__div__img"
+              src="/img/navigation/gyerek.svg"
+              alt="Függöny Oázis"
+            />
+            <h4 class="navigation-content__link-content__div__h4 text-color-w">
+              GYEREKSZOBA
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <section>
+        <div class="form-content">
+          <div class="form-content__form-img-content">
+            <div class="form-content__div form-content__form">
+              <div class="contact-form">
+                <form @submit.prevent="sendEmail">
+
+                    <div class="form-group">
+                      <input
+                        class="form-group__input"
+                        placeholder="Vezetéknév *"
+                        type="text"
+                        id="firstname"
+                        v-model="form.firstname"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <input
+                        class="form-group__input"
+                        placeholder="Keresztnév *"
+                        type="text"
+                        id="lastname"
+                        v-model="form.lastname"
+                        required
+                      />
+                    </div>
+    
+                    <div class="form-group">
+                      <input
+                        class="form-group__input"
+                        placeholder="E-mail cím *"
+                        type="email"
+                        id="email"
+                        v-model="form.email"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <input
+                        class="form-group__input"
+                        placeholder="Telefonszám"
+                        type="text"
+                        id="phonenumber"
+                        v-model="form.phonenumber"
+                        required
+                      />
+                    </div>
+        
+                  <div class="form-group">
+                    <textarea
+                      class="form-group__textarea"
+                      placeholder="Milyen segítségre volna szüksége?"
+                      id="message"
+                      v-model="form.message"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="contact-form__btn-box t-end">
+                    <button class="page-btn text-color-w" type="submit">
+                      Küldés
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="form-content__div form-content__img"></div>
+          </div>
+        </div>
+      </section>
     </section>
   </div>
 </template>

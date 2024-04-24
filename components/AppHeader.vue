@@ -22,6 +22,7 @@ const isMenuOpen = ref(false)
         <NuxtImg
           class="header__up-box__link__img"
           src="/img/header/mobile.svg"
+          alt="Függöny Oázis"
         />
         +36 70 426 67 94
       </a>
@@ -29,7 +30,11 @@ const isMenuOpen = ref(false)
         class="header__up-box__link f-400"
         href="mailto:fuggonyoazis@gmail.com"
       >
-        <NuxtImg class="header__up-box__link__img" src="/img/header/mail.svg" />
+        <NuxtImg
+          class="header__up-box__link__img"
+          src="/img/header/mail.svg"
+          alt="Függöny Oázis"
+        />
         fuggonyoazis@gmail.com
       </a>
     </div>
@@ -38,12 +43,14 @@ const isMenuOpen = ref(false)
         <NuxtImg
           class="header-logo-user-box__img-box__img"
           src="/img/header/logo.svg"
+          alt="Függöny Oázis"
         />
       </div>
       <div class="header-logo-user-box__search-box position-relative">
         <NuxtImg
           class="header-logo-user-box__search-box__img position-absolute"
           src="/img/header/search.svg"
+          alt="Függöny Oázis"
         />
         <input
           class="header-logo-user-box__search-box__input"
@@ -56,6 +63,7 @@ const isMenuOpen = ref(false)
           <NuxtImg
             class="header-logo-user-box__login-box__link__img"
             src="/img/header/user.svg"
+            alt="Függöny Oázis"
           />
         </a>
         <a
@@ -66,6 +74,7 @@ const isMenuOpen = ref(false)
           <NuxtImg
             class="header-logo-user-box__login-box__link__img"
             src="/img/header/basket.svg"
+            alt="Függöny Oázis"
           />
         </a>
       </div>

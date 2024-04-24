@@ -40,6 +40,7 @@ button {
 h1,
 h2,
 h3,
+h4,
 h5 {
   margin: 0;
 }
@@ -56,6 +57,7 @@ p {
 button {
   background-color: transparent;
   border: 0;
+  cursor: pointer;
 }
 
 ul {
@@ -72,6 +74,7 @@ ul {
 
 .grid-2,
 .grid-3,
+.grid-6,
 .grid-7 {
   display: grid;
 }
@@ -82,6 +85,11 @@ ul {
 
 .grid-3 {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-6 {
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1em;
 }
 
 .grid-7 {
@@ -187,6 +195,11 @@ ul {
 }
 
 .header-logo-user-box,
+.navigation-content__link-content__div {
+  background: #1c362b;
+}
+
+.header-logo-user-box,
 .counter,
 .counter__input {
   align-items: center;
@@ -198,10 +211,20 @@ ul {
   width: 100%;
 }
 
+.products-content__link-content__NuxtLink {
+  background: #1c362b;
+}
+
 .header-logo-user-box__search-box__input,
 .header-logo-user-box__login-box__link,
 .carousel-item__NuxtLink {
   background: #fbfadd;
+}
+
+.header-logo-user-box__search-box__input,
+.header-logo-user-box__login-box__link,
+.carousel-item__NuxtLink,
+.products-content__link-content__NuxtLink {
   border-radius: 2em;
 }
 
@@ -215,6 +238,11 @@ ul {
 
 .products-content {
   background: #f8faee;
+}
+
+.carousel-item__NuxtLink,
+.products-content__link-content__NuxtLink {
+  padding: 0.5em 1.5em;
 }
 
 /********************  Identical instructions end **********************/
@@ -240,7 +268,6 @@ ul {
 }
 
 .header-logo-user-box {
-  background: #1c362b;
   padding: 1em 5em;
 }
 
@@ -298,6 +325,7 @@ ul {
 .carousel {
   overflow: hidden;
   border: 1px solid #fbfadd;
+  height: 19em;
 }
 
 .carousel-slide {
@@ -314,9 +342,9 @@ ul {
 }
 
 .slider-content__carousel-content {
-  top: 30%;
+  top: 21%;
   right: 5%;
-  width: 33em;
+  width: 40em;
   padding: 1.3em;
 }
 
@@ -324,8 +352,8 @@ ul {
   justify-content: end;
 }
 
-.carousel-item__NuxtLink {
-  padding: .5em 1.5em;
+.carousel-item__p {
+  margin-bottom: 2em;
 }
 
 /********************  Slider formating end **********************/
@@ -333,11 +361,35 @@ ul {
 /********************  Products formating start **********************/
 
 .products-content {
-  padding: 0 5em;
+  padding: 0 5em 2.5em 5em;
   margin-top: -0.2em;
 }
 
 /********************  Products formating end **********************/
+
+/********************  Navigation formating start **********************/
+
+.navigation-content {
+  padding: 0 5em;
+}
+
+.navigation-content__link-content__div {
+  padding: 2em 0;
+}
+
+.navigation-content__h3 {
+  padding: 3em 0;
+}
+
+.navigation-content__link-content__div__img {
+  width: 27%;
+}
+
+/********************  Navigation formating end **********************/
+
+/********************  Form formating start **********************/
+
+/********************  Form formating end **********************/
 
 /********************  Footer formating start **********************/
 
