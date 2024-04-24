@@ -331,5 +331,14 @@ const sendEmail = () => console.log(form.value)
         </div>
       </div>
     </section>
+    <section>
+      <div class="FAQ-content">
+        <h3
+          class="FAQ-content__h3 text-transform-uppercase f-300 text-center"
+        >
+          GYAKRAN ISMÉTELT KÉRDÉSEK
+        </h3>
+      </div>
+    </section>
   </div>
 </template>

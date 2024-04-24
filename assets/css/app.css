@@ -239,11 +239,13 @@ ul {
   color: #000;
 }
 
-.products-content__h2 {
-  padding: 1.3em 0;
+.products-content__h2,
+.FAQ-content__h3 {
+  padding: 2em 0;
 }
 
-.products-content {
+.products-content,
+.FAQ-content {
   background: #f8faee;
 }
 
@@ -398,6 +400,10 @@ ul {
   width: 27%;
 }
 
+/********************  Navigation formating end **********************/
+
+/********************  Form formating start **********************/
+
 .form-group__input,
 .form-group__textarea {
   border: 1px solid #1c362b;
@@ -420,11 +426,15 @@ ul {
   height: 100%;
 }
 
-/********************  Navigation formating end **********************/
-
-/********************  Form formating start **********************/
-
 /********************  Form formating end **********************/
+
+/********************  FAQ formating start **********************/
+
+.FAQ-content {
+  margin-top: -3em;
+}
+
+/********************  FAQ formating end **********************/
 
 /********************  Footer formating start **********************/
 
