@@ -191,13 +191,19 @@ ul {
 /********************  Identical instructions start **********************/
 
 .header-content,
+.FAQ-content {
+  padding: 0 4em;
+}
+
+.header-content,
 .slider-content__carousel-content {
   background: #4b6752;
 }
 
 .header-logo-user-box,
 .navigation-content__link-content__div,
-.form-content {
+.form-content,
+.AccordionOpen {
   background: #1c362b;
 }
 
@@ -217,7 +223,8 @@ ul {
 }
 
 .products-content__link-content__NuxtLink,
-.contact-form__btn-box__btn {
+.contact-form__btn-box__btn,
+.FAQ-content__link-content__NuxtLink {
   background: #1c362b;
 }
 
@@ -231,12 +238,18 @@ ul {
 .header-logo-user-box__login-box__link,
 .carousel-item__NuxtLink,
 .products-content__link-content__NuxtLink,
-.contact-form__btn-box__btn {
+.contact-form__btn-box__btn,
+.FAQ-content__link-content__NuxtLink {
   border-radius: 2em;
 }
 
 .header-logo-user-box__login-box__link {
   color: #000;
+}
+
+.products-content__link-content,
+.FAQ-content__link-content {
+  padding: 3.5em 0;
 }
 
 .products-content__h2,
@@ -251,7 +264,8 @@ ul {
 
 .carousel-item__NuxtLink,
 .products-content__link-content__NuxtLink,
-.contact-form__btn-box__btn {
+.contact-form__btn-box__btn,
+.FAQ-content__link-content__NuxtLink {
   padding: 0.5em 1.5em;
 }
 
@@ -261,7 +275,7 @@ ul {
 
 .header__up-box {
   background: #f8faee;
-  padding: 0.5em 5em;
+  padding: 0.5em 4em;
 }
 
 .header__up-box__link__img {
@@ -278,7 +292,7 @@ ul {
 }
 
 .header-logo-user-box {
-  padding: 1em 5em;
+  padding: 1em 4em;
 }
 
 .header-logo-user-box__search-box__input {
@@ -312,10 +326,6 @@ ul {
   width: 1em;
   height: 1em;
   margin-left: 0.3em;
-}
-
-.header-content {
-  padding: 0 5em;
 }
 
 .menu__list {
@@ -371,7 +381,7 @@ ul {
 /********************  Products formating start **********************/
 
 .products-content {
-  padding: 0 5em 2.5em 5em;
+  padding: 0 4em 0 4em;
   margin-top: -0.2em;
 }
 
@@ -380,11 +390,11 @@ ul {
 /********************  Navigation formating start **********************/
 
 .navigation-content {
-  padding: 0 5em 13em 5em;
+  padding: 0 4em 13em 4em;
 }
 
 .form-content__form-img-content {
-  padding: 0 5em 0 5em;
+  padding: 0 4em 0 4em;
   bottom: 8em;
 }
 
@@ -406,9 +416,14 @@ ul {
 
 .form-group__input,
 .form-group__textarea {
-  border: 1px solid #1c362b;
   margin: 1em 0;
   padding: 1em;
+}
+
+.form-group__input,
+.form-group__textarea,
+.accordion-content__header {
+  border: 1px solid #1c362b;
 }
 
 .contact-form {
@@ -432,6 +447,40 @@ ul {
 
 .FAQ-content {
   margin-top: -3em;
+}
+
+.accordion-content {
+  flex-direction: column;
+}
+
+.accordion-content__header {
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.accordion-content__header__arrow {
+  transition: transform 0.3s ease-in-out;
+}
+
+.accordion-is-open {
+  transform: rotate(-180deg);
+}
+
+.accordion-content__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.AccordionOpen {
+  max-height: 5em;
+  opacity: 1;
+  margin-bottom: 1em;
+  padding: 1em;
 }
 
 /********************  FAQ formating end **********************/

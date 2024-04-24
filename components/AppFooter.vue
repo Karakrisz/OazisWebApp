@@ -1,5 +1,9 @@
 <script setup></script>
 
 <template>
-  <footer>lábléc</footer>
+  <footer>
+    <div class="footer-content">
+
+    </div>
+  </footer>
 </template>
