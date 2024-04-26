@@ -492,6 +492,26 @@ ul {
 /********************  FAQ formating end **********************/
 
 /********************  Footer formating start **********************/
+.footer-content {
+  padding: 4em;
+}
+
+.footer-content__img-content {
+  align-items: center;
+  justify-content: end;
+}
+
+.footer-content__img-content__img {
+  width: 50%;
+}
+
+.footer-content__link-box--one-formating {
+  margin-left: -15%;
+}
+
+.footer-content__link-box--two-formating {
+  padding-left: 20%;
+}
 
 /********************  Footer formating end **********************/
 
