@@ -131,7 +131,7 @@ const currentIndex = ref<number | null>(null)
                   class="carousel-item__h1 text-color f-300"
                   v-html="highlightPremium(item.title)"
                 ></h1>
-                <p class="carousel-item__p text-color f-400">
+                <p class="carousel-item__p text-color f-300">
                   {{ item.description }}
                 </p>
                 <NuxtLink class="carousel-item__NuxtLink f-300">{{
@@ -204,7 +204,9 @@ const currentIndex = ref<number | null>(null)
               src="/img/navigation/furdo.svg"
               alt="Függöny Oázis"
             />
-            <h4 class="navigation-content__link-content__div__h4 text-transform-uppercase text-color-w">
+            <h4
+              class="navigation-content__link-content__div__h4 text-transform-uppercase text-color-w"
+            >
               FÜRDŐSZOBA
             </h4>
           </div>
@@ -215,7 +217,9 @@ const currentIndex = ref<number | null>(null)
               src="/img/navigation/halo.svg"
               alt="Függöny Oázis"
             />
-            <h4 class="navigation-content__link-content__div__h4 text-transform-uppercase text-color-w">
+            <h4
+              class="navigation-content__link-content__div__h4 text-transform-uppercase text-color-w"
+            >
               HÁLÓSZOBA
             </h4>
           </div>
@@ -226,7 +230,9 @@ const currentIndex = ref<number | null>(null)
               src="/img/navigation/nappali.svg"
               alt="Függöny Oázis"
             />
-            <h4 class="navigation-content__link-content__div__h4 text-transform-uppercase text-color-w">
+            <h4
+              class="navigation-content__link-content__div__h4 text-transform-uppercase text-color-w"
+            >
               NAPPALI
             </h4>
           </div>
@@ -237,7 +243,9 @@ const currentIndex = ref<number | null>(null)
               src="/img/navigation/konyha.svg"
               alt="Függöny Oázis"
             />
-            <h4 class="navigation-content__link-content__div__h4 text-transform-uppercase text-color-w">
+            <h4
+              class="navigation-content__link-content__div__h4 text-transform-uppercase text-color-w"
+            >
               KONYHA
             </h4>
           </div>
@@ -248,7 +256,9 @@ const currentIndex = ref<number | null>(null)
               src="/img/navigation/iroda.svg"
               alt="Függöny Oázis"
             />
-            <h4 class="navigation-content__link-content__div__h4 text-transform-uppercase text-color-w">
+            <h4
+              class="navigation-content__link-content__div__h4 text-transform-uppercase text-color-w"
+            >
               IRODA
             </h4>
           </div>
@@ -259,7 +269,9 @@ const currentIndex = ref<number | null>(null)
               src="/img/navigation/gyerek.svg"
               alt="Függöny Oázis"
             />
-            <h4 class="navigation-content__link-content__div__h4 text-transform-uppercase text-color-w">
+            <h4
+              class="navigation-content__link-content__div__h4 text-transform-uppercase text-color-w"
+            >
               GYEREKSZOBA
             </h4>
           </div>
@@ -329,12 +341,12 @@ const currentIndex = ref<number | null>(null)
                 </div>
                 <div class="contact-form__btn-box">
                   <button
-                    class="contact-form__btn-box__btn text-color-w"
+                    class="contact-form__btn-box__btn text-transform-uppercase text-color-w"
                     type="submit"
                   >
                     Küldés
                     <NuxtImg
-                      class="contact-form__btn-box__btn__img"
+                      class="contact-form__btn-box__btn__img position-relative"
                       src="/img/navigation/mail-arrow.svg"
                       alt="Függöny Oázis"
                     />
@@ -396,7 +408,7 @@ const currentIndex = ref<number | null>(null)
           <NuxtLink
             class="FAQ-content__link-content__NuxtLink text-transform-uppercase text-color-w"
           >
-          ÖSSZES KÉRDÉS MEGTEKINTÉSE
+            ÖSSZES KÉRDÉS MEGTEKINTÉSE
           </NuxtLink>
         </div>
       </div>
