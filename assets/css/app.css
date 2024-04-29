@@ -385,6 +385,7 @@ ul {
 
 .carousel__btn-content {
   justify-content: end;
+  margin-right: -5%;
 }
 
 .carousel-item__p {
@@ -581,6 +582,7 @@ ul {
   }
   .carousel-item__h1 {
     font-size: 2.5rem;
+    margin-bottom: 0.7em;
   }
   .carousel {
     height: 27em;
@@ -714,6 +716,7 @@ ul {
   }
   .carousel-item__h1 {
     font-size: 2.3rem;
+    margin-bottom: 0.7em;
   }
   .carousel {
     height: 26em;
@@ -847,6 +850,7 @@ ul {
   }
   .carousel-item__h1 {
     font-size: 2.3rem;
+    margin-bottom: 0.7em;
   }
   .carousel {
     height: 25em;
@@ -983,6 +987,7 @@ ul {
   }
   .carousel-item__h1 {
     font-size: 2.1rem;
+    margin-bottom: 0.7em;
   }
   .carousel {
     height: 21em;
@@ -1116,6 +1121,7 @@ ul {
   }
   .carousel-item__h1 {
     font-size: 2rem;
+    margin-bottom: 0.7em;
   }
   .carousel {
     height: 21em;
@@ -1205,30 +1211,30 @@ ul {
 
 @media (min-width: 1400px) and (max-width: 1500px) {
   p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .grid-6 {
-    gap: 1.3em;
+    gap: 1em;
   }
   .header__up-box,
   .header-logo-user-box {
-    padding: 1em 5em;
+    padding: 1em 4em;
   }
   .FAQ-content {
     padding: 0 5em;
   }
   .products-content,
   .form-content__form-img-content {
-    padding: 0 5em 0 5em;
+    padding: 0 4em 0 4em;
   }
   .footer-content {
-    padding: 5em;
+    padding: 4em;
   }
   .navigation-content {
-    padding: 0 5em 13em 5em;
+    padding: 0 4em 13em 4em;
   }
   .header-content {
-    padding: 0.3em 5em;
+    padding: 0.3em 4em;
   }
   .header-logo-user-box__img-box__img {
     width: 30%;
@@ -1237,10 +1243,10 @@ ul {
   .header-logo-user-box__search-box__input,
   .header-logo-user-box__login-box__link,
   .menu__item {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .header-logo-user-box__search-box__img {
-    top: 0.75em;
+    top: 0.55em;
     width: 1.7em;
   }
   .slider-content__carousel-content {
@@ -1249,9 +1255,10 @@ ul {
   }
   .carousel-item__h1 {
     font-size: 1.9rem;
+    margin-bottom: 0.7em;
   }
   .carousel {
-    height: 20em;
+    height: 19em;
   }
   .carousel-item {
     padding: 2em;
@@ -1260,7 +1267,7 @@ ul {
   .products-content__link-content__NuxtLink,
   .contact-form__btn-box__btn,
   .FAQ-content__link-content__NuxtLink {
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 0.6em 1.6em;
   }
   .carousel__btn-content__p {
@@ -1276,17 +1283,17 @@ ul {
   .products-content__h2,
   .navigation-content__h3,
   .FAQ-content__h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .navigation-content__link-content__div__h4 {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   .navigation-content__link-content__div {
-    padding: 2.5em 0;
+    padding: 2em 0;
   }
   .contact-form__h5,
   .contact-form__h6 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
   .contact-form__h6 {
     margin-bottom: 0.3em;
@@ -1297,11 +1304,11 @@ ul {
     font-size: 1rem;
   }
   .form-content__form-img-content__div {
-    height: 52.2em;
+    height: 51.3em;
   }
   .contact-form {
     /* max-height: 94.5%; */
-    padding: 2.5em;
+    padding: 2.3em;
   }
   .contact-form__btn-box__btn__img {
     width: 1.1em;
@@ -1309,7 +1316,7 @@ ul {
     right: -0.3em;
   }
   .accordion-content__header__h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .FAQ-content {
     padding-bottom: 1em;
@@ -1321,8 +1328,8 @@ ul {
     max-height: 6em;
   }
   .footer-content__link-box__h6 {
-    font-size: 1.3rem;
-    margin-bottom: 2em;
+    font-size: 1.2rem;
+    margin-bottom: 1.8em;
   }
   .footer-content__link-box__link__img {
     width: 1em;
@@ -1338,6 +1345,138 @@ ul {
 }
 
 @media (min-width: 1200px) and (max-width: 1400px) {
+  p {
+    font-size: 0.9rem;
+  }
+  .grid-6 {
+    gap: 1em;
+  }
+  .header__up-box,
+  .header-logo-user-box {
+    padding: 1em 4em;
+  }
+  .FAQ-content {
+    padding: 0 5em;
+  }
+  .products-content,
+  .form-content__form-img-content {
+    padding: 0 4em 0 4em;
+  }
+  .footer-content {
+    padding: 4em;
+  }
+  .navigation-content {
+    padding: 0 4em 13em 4em;
+  }
+  .header-content {
+    padding: 0.3em 4em;
+  }
+  .header-logo-user-box__img-box__img {
+    width: 30%;
+  }
+  .header__up-box__link,
+  .header-logo-user-box__search-box__input,
+  .header-logo-user-box__login-box__link,
+  .menu__item {
+    font-size: 0.9rem;
+  }
+  .header-logo-user-box__search-box__img {
+    top: 0.55em;
+    width: 1.7em;
+  }
+  .slider-content__carousel-content {
+    width: 47%;
+    padding: 1.5em;
+  }
+  .carousel-item__h1 {
+    font-size: 1.9rem;
+    margin-bottom: 0.7em;
+  }
+  .carousel {
+    height: 19em;
+  }
+  .carousel-item {
+    padding: 2em;
+  }
+  .carousel-item__NuxtLink,
+  .products-content__link-content__NuxtLink,
+  .contact-form__btn-box__btn,
+  .FAQ-content__link-content__NuxtLink {
+    font-size: 0.9rem;
+    padding: 0.6em 1.6em;
+  }
+  .carousel__btn-content__p {
+    margin-left: 0.7em;
+    margin-right: 0.7em;
+  }
+  .carousel-item__p {
+    margin-bottom: 3em;
+  }
+  .carousel__btn-content__btn__img {
+    width: 0.7em;
+  }
+  .products-content__h2,
+  .navigation-content__h3,
+  .FAQ-content__h3 {
+    font-size: 1.3rem;
+  }
+  .navigation-content__link-content__div__h4 {
+    font-size: 1rem;
+  }
+  .navigation-content__link-content__div {
+    padding: 2em 0;
+  }
+  .contact-form__h5,
+  .contact-form__h6 {
+    font-size: 1.5rem;
+  }
+  .contact-form__h6 {
+    margin-bottom: 0.3em;
+  }
+  .form-group__input,
+  .form-group__textarea,
+  .accordion-content__header {
+    font-size: 1rem;
+  }
+  .form-content__form-img-content__div {
+    height: 51.3em;
+  }
+  .contact-form {
+    /* max-height: 94.5%; */
+    padding: 2.3em;
+  }
+  .contact-form__btn-box__btn__img {
+    width: 1.1em;
+    top: 0.15em;
+    right: -0.3em;
+  }
+  .accordion-content__header__h3 {
+    font-size: 1.1rem;
+  }
+  .FAQ-content {
+    padding-bottom: 1em;
+  }
+  .accordion-content__header__arrow__img {
+    width: 1.3em;
+  }
+  .AccordionOpen {
+    max-height: 6em;
+  }
+  .footer-content__link-box__h6 {
+    font-size: 1.2rem;
+    margin-bottom: 1.8em;
+  }
+  .footer-content__link-box__link__img {
+    width: 1em;
+    margin-right: 0.5em;
+  }
+  .footer-content__link-box--two-formating {
+    padding-left: 10%;
+  }
+  .footer-content__link-box__p {
+    padding-bottom: 0.5em;
+    font-size: 0.9rem;
+  }
 }
 
 @media (min-width: 991px) and (max-width: 1200px) {
