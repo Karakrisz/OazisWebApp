@@ -70,7 +70,7 @@
         </p>
       </div>
       <div class="footer-content__link-box footer-content__link-box--two-formating">
-        <h6 class="footer-content__link-box__h6 text-color">ELÉRHETŐSÉG</h6>
+        <h6 class="footer-content__link-box__h6 footer-content__link-box__h6--margin text-color">ELÉRHETŐSÉG</h6>
         <p class="footer-content__link-box__p">
           <a
             href="tel:+36704266794"
