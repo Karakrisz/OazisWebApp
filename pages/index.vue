@@ -137,24 +137,32 @@ const currentIndex = ref<number | null>(null)
                 <NuxtLink class="carousel-item__NuxtLink f-300">{{
                   item.button
                 }}</NuxtLink>
-                <div class="carousel__btn-content d-flex">
-                  <button class="carousel__btn-content__btn" @click="prevSlide">
-                    <NuxtImg
-                      class="carousel__btn-content__btn__img"
-                      src="/img/slider/a-left.svg"
-                      alt="Függöny Oázis"
-                    />
-                  </button>
-                  <p class="carousel__btn-content__p text-color f-300">
-                    {{ item.number }}
-                  </p>
-                  <button class="carousel__btn-content__btn" @click="nextSlide">
-                    <NuxtImg
-                      class="carousel__btn-content__btn__img"
-                      src="/img/slider/a-right.svg"
-                      alt="Függöny Oázis"
-                    />
-                  </button>
+                <div class="test-v">
+                  <div class="carousel__btn-content d-flex">
+                    <button
+                      class="carousel__btn-content__btn"
+                      @click="prevSlide"
+                    >
+                      <NuxtImg
+                        class="carousel__btn-content__btn__img"
+                        src="/img/slider/a-left.svg"
+                        alt="Függöny Oázis"
+                      />
+                    </button>
+                    <p class="carousel__btn-content__p text-color f-300">
+                      {{ item.number }}
+                    </p>
+                    <button
+                      class="carousel__btn-content__btn"
+                      @click="nextSlide"
+                    >
+                      <NuxtImg
+                        class="carousel__btn-content__btn__img"
+                        src="/img/slider/a-right.svg"
+                        alt="Függöny Oázis"
+                      />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -170,7 +178,7 @@ const currentIndex = ref<number | null>(null)
         >
           KIEMELT AJÁNLATOK
         </h2>
-        <div class="counter d-flex">
+        <div class="counter d-flex d-none">
           <button class="counter__btn" @click="decrement">-</button>
           <input
             class="counter__input"
