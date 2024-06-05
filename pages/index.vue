@@ -421,5 +421,101 @@ const currentIndex = ref<number | null>(null)
         </div>
       </div>
     </section>
+    <section>
+      <div class="blog-content">
+        <h4 class="blog-content__h4 text-transform-uppercase f-300 text-center">
+          BLOG
+        </h4>
+
+        <div class="blog-content__img-text-box grid-3">
+          <div class="blog-content__img-text-box__div">
+            <NuxtImg
+              class="blog-content__img-text-box__div__img"
+              src="/img/blog/blog.png"
+              alt="Függöny Oázis"
+            />
+            <h3 class="blog-content__img-text-box__div__h3">
+              Stílusos Otthon: A Tökéletes Függönyök Kiválasztása
+            </h3>
+            <p class="blog-content__img-text-box__div__p">
+              A függönyök nem csupán árnyékolásra szolgálnak, hanem otthonunk
+              hangulatát és stílusát is meghatározzák. Blogunkban bemutatjuk,
+              hogyan választhatjuk ki a tökéletes függönyt, amely harmonizál
+              otthonunk többi berendezésével.
+            </p>
+            <div class="blog-content__img-text-box__div__link-box">
+              <NuxtLink
+                class="blog-content__img-text-box__div__link-box__NuxtLink"
+              >
+                Tovább olvasok
+              </NuxtLink>
+              <NuxtImg
+                class="blog-content__img-text-box__div__link-box__NuxtLink__img"
+                src="/img/blog/blog-a-right.svg"
+                alt="Függöny Oázis"
+              />
+            </div>
+          </div>
+
+          <div class="blog-content__img-text-box__div">
+            <NuxtImg
+              class="blog-content__img-text-box__div__img"
+              src="/img/blog/blog2.png"
+              alt="Függöny Oázis"
+            />
+            <h3 class="blog-content__img-text-box__div__h3">
+              Stílusos Otthon: A Tökéletes Függönyök Kiválasztása
+            </h3>
+            <p class="blog-content__img-text-box__div__p">
+              A függönyök nem csupán árnyékolásra szolgálnak, hanem otthonunk
+              hangulatát és stílusát is meghatározzák. Blogunkban bemutatjuk,
+              hogyan választhatjuk ki a tökéletes függönyt, amely harmonizál
+              otthonunk többi berendezésével.
+            </p>
+            <div class="blog-content__img-text-box__div__link-box">
+              <NuxtLink
+                class="blog-content__img-text-box__div__link-box__NuxtLink"
+              >
+                Tovább olvasok
+              </NuxtLink>
+              <NuxtImg
+                class="blog-content__img-text-box__div__link-box__NuxtLink__img"
+                src="/img/blog/blog-a-right.svg"
+                alt="Függöny Oázis"
+              />
+            </div>
+          </div>
+
+          <div class="blog-content__img-text-box__div">
+            <NuxtImg
+              class="blog-content__img-text-box__div__img"
+              src="/img/blog/blog3.png"
+              alt="Függöny Oázis"
+            />
+            <h3 class="blog-content__img-text-box__div__h3">
+              Stílusos Otthon: A Tökéletes Függönyök Kiválasztása
+            </h3>
+            <p class="blog-content__img-text-box__div__p">
+              A függönyök nem csupán árnyékolásra szolgálnak, hanem otthonunk
+              hangulatát és stílusát is meghatározzák. Blogunkban bemutatjuk,
+              hogyan választhatjuk ki a tökéletes függönyt, amely harmonizál
+              otthonunk többi berendezésével.
+            </p>
+            <div class="blog-content__img-text-box__div__link-box">
+              <NuxtLink
+                class="blog-content__img-text-box__div__link-box__NuxtLink"
+              >
+                Tovább olvasok
+              </NuxtLink>
+              <NuxtImg
+                class="blog-content__img-text-box__div__link-box__NuxtLink__img"
+                src="/img/blog/blog-a-right.svg"
+                alt="Függöny Oázis"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>

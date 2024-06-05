@@ -89,13 +89,17 @@ ul {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.grid-3,
+.grid-6 {
+  gap: 1em;
+}
+
 .grid-4 {
   grid-template-columns: repeat(4, 1fr);
 }
 
 .grid-6 {
   grid-template-columns: repeat(6, 1fr);
-  gap: 1em;
 }
 
 .grid-7 {
@@ -228,7 +232,8 @@ ul {
 .carousel-container,
 .form-content__img-content__img,
 .form-group__input,
-.form-group__textarea {
+.form-group__textarea,
+.blog-content__img-text-box__div__img {
   width: 100%;
 }
 
@@ -263,7 +268,8 @@ ul {
 }
 
 .products-content__h2,
-.FAQ-content__h3 {
+.FAQ-content__h3,
+.blog-content__h4 {
   padding: 2em 0;
 }
 
@@ -511,6 +517,14 @@ ul {
 
 /********************  FAQ formating end **********************/
 
+/********************  Blog formating start **********************/
+
+.blog-content {
+  padding: 0 4em 2em 4em;
+}
+
+/********************  Blog formating end **********************/
+
 /********************  Footer formating start **********************/
 .footer-content {
   padding: 4em;
@@ -550,6 +564,9 @@ ul {
   }
   .FAQ-content {
     padding: 0 5em;
+  }
+  .blog-content {
+    padding: 0 5em 3em 5em;
   }
   .products-content,
   .form-content__form-img-content {
@@ -610,7 +627,8 @@ ul {
   }
   .products-content__h2,
   .navigation-content__h3,
-  .FAQ-content__h3 {
+  .FAQ-content__h3,
+  .blog-content__h4 {
     font-size: 2rem;
   }
   .navigation-content__link-content__div__h4 {
@@ -643,7 +661,8 @@ ul {
     top: 0.15em;
     right: -0.3em;
   }
-  .accordion-content__header__h3 {
+  .accordion-content__header__h3,
+  .blog-content__img-text-box__div__h3 {
     font-size: 1.5rem;
   }
   .FAQ-content {
@@ -684,6 +703,9 @@ ul {
   }
   .FAQ-content {
     padding: 0 5em;
+  }
+  .blog-content {
+    padding: 0 5em 3em 5em;
   }
   .products-content,
   .form-content__form-img-content {
@@ -744,7 +766,8 @@ ul {
   }
   .products-content__h2,
   .navigation-content__h3,
-  .FAQ-content__h3 {
+  .FAQ-content__h3,
+  .blog-content__h4 {
     font-size: 2rem;
   }
   .navigation-content__link-content__div__h4 {
@@ -777,7 +800,8 @@ ul {
     top: 0.15em;
     right: -0.3em;
   }
-  .accordion-content__header__h3 {
+  .accordion-content__header__h3,
+  .blog-content__img-text-box__div__h3 {
     font-size: 1.5rem;
   }
   .FAQ-content {
@@ -828,6 +852,9 @@ ul {
   }
   .footer-content {
     padding: 5em;
+  }
+  .blog-content {
+    padding: 0 5em 3em 5em;
   }
   .navigation-content {
     padding: 0 5em 15em 5em;
@@ -881,7 +908,8 @@ ul {
   }
   .products-content__h2,
   .navigation-content__h3,
-  .FAQ-content__h3 {
+  .FAQ-content__h3,
+  .blog-content__h4 {
     font-size: 1.8rem;
   }
   .navigation-content__link-content__div__h4 {
@@ -914,7 +942,8 @@ ul {
     top: 0.15em;
     right: -0.3em;
   }
-  .accordion-content__header__h3 {
+  .accordion-content__header__h3,
+  .blog-content__img-text-box__div__h3 {
     font-size: 1.3rem;
   }
   .FAQ-content {
@@ -955,6 +984,9 @@ ul {
   }
   .FAQ-content {
     padding: 0 5em;
+  }
+  .blog-content {
+    padding: 0 5em 3em 5em;
   }
   .products-content,
   .form-content__form-img-content {
@@ -1018,7 +1050,8 @@ ul {
   }
   .products-content__h2,
   .navigation-content__h3,
-  .FAQ-content__h3 {
+  .FAQ-content__h3,
+  .blog-content__h4 {
     font-size: 1.6rem;
   }
   .navigation-content__link-content__div__h4 {
@@ -1051,7 +1084,8 @@ ul {
     top: 0.15em;
     right: -0.3em;
   }
-  .accordion-content__header__h3 {
+  .accordion-content__header__h3,
+  .blog-content__img-text-box__div__h3 {
     font-size: 1.3rem;
   }
   .FAQ-content {
@@ -1092,6 +1126,9 @@ ul {
   }
   .FAQ-content {
     padding: 0 5em;
+  }
+  .blog-content {
+    padding: 0 5em 3em 5em;
   }
   .products-content,
   .form-content__form-img-content {
@@ -1152,7 +1189,8 @@ ul {
   }
   .products-content__h2,
   .navigation-content__h3,
-  .FAQ-content__h3 {
+  .FAQ-content__h3,
+  .blog-content__h4 {
     font-size: 1.5rem;
   }
   .navigation-content__link-content__div__h4 {
@@ -1185,7 +1223,8 @@ ul {
     top: 0.15em;
     right: -0.3em;
   }
-  .accordion-content__header__h3 {
+  .accordion-content__header__h3,
+  .blog-content__img-text-box__div__h3 {
     font-size: 1.3rem;
   }
   .FAQ-content {
@@ -1226,6 +1265,9 @@ ul {
   }
   .FAQ-content {
     padding: 0 4em;
+  }
+  .blog-content {
+    padding: 0 4em 2em 4em;
   }
   .products-content,
   .form-content__form-img-content {
@@ -1286,7 +1328,8 @@ ul {
   }
   .products-content__h2,
   .navigation-content__h3,
-  .FAQ-content__h3 {
+  .FAQ-content__h3,
+  .blog-content__h4 {
     font-size: 1.3rem;
   }
   .navigation-content__link-content__div__h4 {
@@ -1319,7 +1362,8 @@ ul {
     top: 0.15em;
     right: -0.3em;
   }
-  .accordion-content__header__h3 {
+  .accordion-content__header__h3,
+  .blog-content__img-text-box__div__h3 {
     font-size: 1.1rem;
   }
   .FAQ-content {
@@ -1361,6 +1405,9 @@ ul {
   }
   .FAQ-content {
     padding: 0 4em;
+  }
+  .blog-content {
+    padding: 0 4em 2em 4em;
   }
   .products-content,
   .form-content__form-img-content {
@@ -1424,7 +1471,8 @@ ul {
   }
   .products-content__h2,
   .navigation-content__h3,
-  .FAQ-content__h3 {
+  .FAQ-content__h3,
+  .blog-content__h4 {
     font-size: 1.3rem;
   }
   .navigation-content__link-content__div__h4 {
@@ -1457,7 +1505,8 @@ ul {
     top: 0.15em;
     right: -0.3em;
   }
-  .accordion-content__header__h3 {
+  .accordion-content__header__h3,
+  .blog-content__img-text-box__div__h3 {
     font-size: 1.1rem;
   }
   .FAQ-content {
@@ -1499,6 +1548,9 @@ ul {
   }
   .FAQ-content {
     padding: 0 3em;
+  }
+  .blog-content {
+    padding: 0 3em 2em 3em;
   }
   .products-content,
   .form-content__form-img-content {
@@ -1560,7 +1612,8 @@ ul {
   }
   .products-content__h2,
   .navigation-content__h3,
-  .FAQ-content__h3 {
+  .FAQ-content__h3,
+  .blog-content__h4 {
     font-size: 1.3rem;
   }
   .navigation-content__link-content__div__h4 {
@@ -1593,7 +1646,8 @@ ul {
     top: 0.15em;
     right: -0.3em;
   }
-  .accordion-content__header__h3 {
+  .accordion-content__header__h3,
+  .blog-content__img-text-box__div__h3 {
     font-size: 1rem;
   }
   .FAQ-content {
@@ -1728,6 +1782,9 @@ ul {
   .FAQ-content {
     padding: 0 3em;
   }
+  .blog-content {
+    padding: 0 3em 2em 3em;
+  }
   .products-content,
   .form-content__form-img-content {
     padding: 0 3em 0 3em;
@@ -1789,7 +1846,8 @@ ul {
   }
   .products-content__h2,
   .navigation-content__h3,
-  .FAQ-content__h3 {
+  .FAQ-content__h3,
+  .blog-content__h4 {
     font-size: 1.3rem;
   }
   .navigation-content__link-content__div__h4 {
@@ -1822,7 +1880,8 @@ ul {
     top: 0.15em;
     right: -0.3em;
   }
-  .accordion-content__header__h3 {
+  .accordion-content__header__h3,
+  .blog-content__img-text-box__div__h3 {
     font-size: 1rem;
   }
   .FAQ-content {
@@ -1977,6 +2036,9 @@ ul {
   .FAQ-content {
     padding: 0 2em;
   }
+  .blog-content {
+    padding: 0 2em 1em 2em;
+  }
   .products-content,
   .form-content__form-img-content {
     padding: 0 2em 0 2em;
@@ -2042,7 +2104,8 @@ ul {
   }
   .products-content__h2,
   .navigation-content__h3,
-  .FAQ-content__h3 {
+  .FAQ-content__h3,
+  .blog-content__h4 {
     font-size: 1.2rem;
   }
   .navigation-content__link-content__div__h4 {
@@ -2076,7 +2139,8 @@ ul {
     top: 0.15em;
     right: -0.3em;
   }
-  .accordion-content__header__h3 {
+  .accordion-content__header__h3,
+  .blog-content__img-text-box__div__h3 {
     font-size: 1rem;
   }
   .FAQ-content {
