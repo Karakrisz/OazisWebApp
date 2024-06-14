@@ -31,6 +31,13 @@ onMounted(() => {
   fetchPosts()
 })
 
+function getShortBody(body: string) {
+  if (body.length > 200) {
+    return body.substring(0, 200) + '...'
+  }
+  return body
+}
+
 const sliderElem = ref([
   {
     title: 'KIZÁRÓLAG PRÉMIUM ALAPANYOGOKBÓL DOLGOZUNK',
@@ -475,7 +482,7 @@ const currentIndex = ref<number | null>(null)
 
               <p
                 class="blog-content__img-text-box__div__p"
-                v-html="post.body"
+                v-html="getShortBody(post.body)"
               />
 
               <div class="blog-content__img-text-box__div__link-box d-flex">

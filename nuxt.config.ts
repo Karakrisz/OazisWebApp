@@ -1,4 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
+interface Post {
+  id: number
+  title: string
+  body: string
+  image: string
+}
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/app.css'],
@@ -40,8 +48,33 @@ export default defineNuxtConfig({
           href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap',
         },
       ],
+      script: [
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'Függöny Oázis',
+            url: 'https://www.fuggonyoazis.hu',
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: 'https://www.fuggonyoazis.hu/?s={search_term_string}',
+              'query-input': 'required name=search_term_string',
+            },
+          }),
+        },
+      ],
     },
   },
 
-  modules: ['@nuxt/image', "@nuxtjs/sitemap"],
+  modules: ['@nuxt/image', '@nuxtjs/sitemap'],
+
+  site: {
+    url: 'https://www.fuggonyoazis.hu',
+    routes: async () => {
+      const response = await fetch('http://127.0.0.1:8000/json-posts')
+      const posts: Post[] = await response.json()
+      return posts.map((post) => `/posts/${post.id}`)
+    },
+  },
 })
