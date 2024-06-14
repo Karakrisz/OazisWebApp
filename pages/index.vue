@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 
+const { data: itemsPost } = await useFetch('http://127.0.0.1:8000/json-posts')
+
 const sliderElem = ref([
   {
     title: 'KIZÁRÓLAG PRÉMIUM ALAPANYOGOKBÓL DOLGOZUNK',
@@ -428,86 +430,29 @@ const currentIndex = ref<number | null>(null)
         </h4>
 
         <div class="blog-content__img-text-box grid-3">
-          <div class="blog-content__img-text-box__div">
+          <div
+            v-for="post in itemsPost"
+            :key="post.id"
+            class="blog-content__img-text-box__div"
+          >
             <NuxtImg
               class="blog-content__img-text-box__div__img"
-              src="/img/blog/blog.png"
-              alt="Függöny Oázis"
+              :src="`http://127.0.0.1:8000/storage/${post.image}`"
+              alt="{{ post.title }}"
             />
             <div class="blog-content__img-text-box__div__tBox">
               <h3 class="blog-content__img-text-box__div__h3">
-                Stílusos Otthon: A Tökéletes Függönyök Kiválasztása
+                {{ post.title }}
               </h3>
-              <p class="blog-content__img-text-box__div__p">
-                A függönyök nem csupán árnyékolásra szolgálnak, hanem otthonunk
-                hangulatát és stílusát is meghatározzák. Blogunkban bemutatjuk,
-                hogyan választhatjuk ki a tökéletes függönyt, amely harmonizál
-                otthonunk többi berendezésével.
-              </p>
-              <div class="blog-content__img-text-box__div__link-box d-flex">
-                <NuxtLink
-                  class="blog-content__img-text-box__div__link-box__NuxtLink f-500"
-                >
-                  Tovább olvasok
-                </NuxtLink>
-                <NuxtImg
-                  class="blog-content__img-text-box__div__link-box__NuxtLink__img"
-                  src="/img/blog/blog-a-right.svg"
-                  alt="Függöny Oázis"
+              <ClientOnly>
+                <p
+                  class="blog-content__img-text-box__div__p"
+                  v-html="post.body"
                 />
-              </div>
-            </div>
-          </div>
-
-          <div class="blog-content__img-text-box__div">
-            <NuxtImg
-              class="blog-content__img-text-box__div__img"
-              src="/img/blog/blog2.png"
-              alt="Függöny Oázis"
-            />
-            <div class="blog-content__img-text-box__div__tBox">
-              <h3 class="blog-content__img-text-box__div__h3">
-                Stílusos Otthon: A Tökéletes Függönyök Kiválasztása
-              </h3>
-              <p class="blog-content__img-text-box__div__p">
-                A függönyök nem csupán árnyékolásra szolgálnak, hanem otthonunk
-                hangulatát és stílusát is meghatározzák. Blogunkban bemutatjuk,
-                hogyan választhatjuk ki a tökéletes függönyt, amely harmonizál
-                otthonunk többi berendezésével.
-              </p>
+              </ClientOnly>
               <div class="blog-content__img-text-box__div__link-box d-flex">
                 <NuxtLink
-                  class="blog-content__img-text-box__div__link-box__NuxtLink f-500"
-                >
-                  Tovább olvasok
-                </NuxtLink>
-                <NuxtImg
-                  class="blog-content__img-text-box__div__link-box__NuxtLink__img"
-                  src="/img/blog/blog-a-right.svg"
-                  alt="Függöny Oázis"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="blog-content__img-text-box__div">
-            <NuxtImg
-              class="blog-content__img-text-box__div__img"
-              src="/img/blog/blog3.png"
-              alt="Függöny Oázis"
-            />
-            <div class="blog-content__img-text-box__div__tBox">
-              <h3 class="blog-content__img-text-box__div__h3">
-                Stílusos Otthon: A Tökéletes Függönyök Kiválasztása
-              </h3>
-              <p class="blog-content__img-text-box__div__p">
-                A függönyök nem csupán árnyékolásra szolgálnak, hanem otthonunk
-                hangulatát és stílusát is meghatározzák. Blogunkban bemutatjuk,
-                hogyan választhatjuk ki a tökéletes függönyt, amely harmonizál
-                otthonunk többi berendezésével.
-              </p>
-              <div class="blog-content__img-text-box__div__link-box d-flex">
-                <NuxtLink
+                  :to="`/posts/${post.id}`"
                   class="blog-content__img-text-box__div__link-box__NuxtLink f-500"
                 >
                   Tovább olvasok

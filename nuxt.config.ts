@@ -5,7 +5,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Biztos Alkuszom',
+      title: 'Függöny Oázis',
       htmlAttrs: {
         lang: 'hu',
       },
@@ -22,6 +22,7 @@ export default defineNuxtConfig({
             font-src 'self' https: data:;
             style-src 'self' https: 'unsafe-inline';
             script-src 'self' https: 'unsafe-inline' 'unsafe-eval';
+            connect-src 'self' https: http: http://127.0.0.1:8000/json-posts;
           `,
         },
       ],
