@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 
+
 interface Post {
   id: number
   title: string
@@ -15,7 +16,9 @@ const loading = ref(false)
 async function fetchPosts() {
   loading.value = true
   try {
-    const response = await fetch('https://fuggonyoazis.hu/api/public/json-posts')
+    const response = await fetch(
+      'https://fuggonyoazis.hu/api/public/json-posts'
+    )
     if (!response.ok) throw new Error('Failed to fetch posts')
     const data = await response.json()
     itemsPost.value = data
@@ -32,10 +35,11 @@ onMounted(() => {
 })
 
 function getShortBody(body: string) {
-  if (body.length > 200) {
-    return body.substring(0, 200) + '...'
+  const decodedBody = he.decode(body)
+  if (decodedBody.length > 100) {
+    return decodedBody.substring(0, 100) + '...'
   }
-  return body
+  return decodedBody
 }
 
 const sliderElem = ref([
@@ -229,7 +233,7 @@ const currentIndex = ref<number | null>(null)
           <NuxtLink
             class="products-content__link-content__NuxtLink text-transform-uppercase text-color-w f-600"
           >
-           termékek feltöltés alatt
+            termékek feltöltés alatt
           </NuxtLink>
         </div>
       </div>
