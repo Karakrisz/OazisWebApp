@@ -603,6 +603,14 @@ ul {
 .supage-content h3 {
   margin: 1em 0;
 }
+
+.copyright-content {
+  padding: 1em 4em;
+}
+
+.copyright-content__img {
+  width: 7%;
+}
 /********************  Footer formating end **********************/
 
 /********************  Media formating start **********************/
@@ -628,6 +636,9 @@ ul {
   .products-content,
   .form-content__form-img-content {
     padding: 0 5em 0 5em;
+  }
+  .copyright-content {
+    padding: 1em 5em;
   }
   .form-content {
     padding-bottom: 1em;
@@ -774,6 +785,9 @@ ul {
   .form-content__form-img-content {
     padding: 0 5em 0 5em;
   }
+  .copyright-content {
+    padding: 1em 5em;
+  }
   .form-content {
     padding-bottom: 1em;
   }
@@ -914,6 +928,9 @@ ul {
   .products-content,
   .form-content__form-img-content {
     padding: 0 5em 0 5em;
+  }
+  .copyright-content {
+    padding: 1em 5em;
   }
   .form-content {
     padding-bottom: 1em;
@@ -1067,6 +1084,9 @@ ul {
   .form-content__form-img-content {
     padding: 0 5em 0 5em;
   }
+  .copyright-content {
+    padding: 1em 5em;
+  }
   .form-content {
     padding-bottom: 1em;
   }
@@ -1215,6 +1235,9 @@ ul {
   .form-content__form-img-content {
     padding: 0 5em 0 5em;
   }
+  .copyright-content {
+    padding: 1em 5em;
+  }
   .footer-content {
     padding: 5em;
   }
@@ -1359,6 +1382,9 @@ ul {
   .products-content,
   .form-content__form-img-content {
     padding: 0 4em 0 4em;
+  }
+  .copyright-content {
+    padding: 1em 4em;
   }
   .footer-content {
     padding: 4em;
@@ -1505,6 +1531,9 @@ ul {
   .products-content,
   .form-content__form-img-content {
     padding: 0 4em 0 4em;
+  }
+  .copyright-content {
+    padding: 1em 4em;
   }
   .footer-content {
     padding: 4em;
@@ -1654,6 +1683,9 @@ ul {
   .products-content,
   .form-content__form-img-content {
     padding: 0 3em 0 3em;
+  }
+  .copyright-content {
+    padding: 1em 3em;
   }
   .footer-content {
     padding: 3em;
@@ -1894,6 +1926,9 @@ ul {
   .form-content__form-img-content {
     padding: 0 3em 0 3em;
   }
+  .copyright-content {
+    padding: 1em 3em;
+  }
   .footer-content {
     padding: 3em;
   }
@@ -2032,6 +2067,9 @@ ul {
   }
   .footer-content__img-content__img {
     width: 50%;
+  }
+  .copyright-content__img {
+    width: 20%;
   }
   .supage-content__img {
     width: 100%;
@@ -2172,6 +2210,12 @@ ul {
   .products-content,
   .form-content__form-img-content {
     padding: 0 2em 0 2em;
+  }
+  .copyright-content {
+    padding: 1em 2em;
+  }
+  .copyright-content__img {
+    width: 25%;
   }
   .footer-content {
     padding: 2em;
