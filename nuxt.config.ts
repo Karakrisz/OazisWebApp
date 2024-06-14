@@ -35,7 +35,7 @@ export default defineNuxtConfig({
             font-src 'self' https: data:;
             style-src 'self' https: 'unsafe-inline';
             script-src 'self' https: 'unsafe-inline' 'unsafe-eval';
-            connect-src 'self' https: http: http://127.0.0.1:8000/json-posts;
+            connect-src 'self' https: http: https://fuggonyoazis.hu/api/public/json-posts;
           `,
         },
       ],
@@ -72,7 +72,7 @@ export default defineNuxtConfig({
   site: {
     url: 'https://www.fuggonyoazis.hu',
     routes: async () => {
-      const response = await fetch('http://127.0.0.1:8000/json-posts')
+      const response = await fetch('https://fuggonyoazis.hu/api/public/json-posts')
       const posts: Post[] = await response.json()
       return posts.map((post) => `/posts/${post.id}`)
     },

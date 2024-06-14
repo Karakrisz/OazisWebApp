@@ -61,7 +61,7 @@ const isMenuOpen = ref(false)
         <a class="header-logo-user-box__login-box__link" href="#">
           Bejelentkezés
           <NuxtImg
-            class="header-logo-user-box__login-box__link__img"
+            class="header-logo-user-box__login-box__link__img position-relative"
             src="/img/header/user.svg"
             alt="Függöny Oázis"
           />
@@ -72,7 +72,7 @@ const isMenuOpen = ref(false)
         >
           13
           <NuxtImg
-            class="header-logo-user-box__login-box__link__img"
+            class="header-logo-user-box__login-box__link__img header-logo-user-box__login-box__link__img--format position-relative"
             src="/img/header/basket.svg"
             alt="Függöny Oázis"
           />

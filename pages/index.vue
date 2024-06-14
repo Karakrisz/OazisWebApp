@@ -15,7 +15,7 @@ const loading = ref(false)
 async function fetchPosts() {
   loading.value = true
   try {
-    const response = await fetch('http://127.0.0.1:8000/json-posts')
+    const response = await fetch('https://fuggonyoazis.hu/api/public/json-posts')
     if (!response.ok) throw new Error('Failed to fetch posts')
     const data = await response.json()
     itemsPost.value = data
@@ -227,9 +227,9 @@ const currentIndex = ref<number | null>(null)
         </div>
         <div class="products-content__link-content text-center">
           <NuxtLink
-            class="products-content__link-content__NuxtLink text-transform-uppercase text-color-w"
+            class="products-content__link-content__NuxtLink text-transform-uppercase text-color-w f-600"
           >
-            ÖSSZES AJÁNLAT MEGTEKINTÉSE
+           termékek feltöltés alatt
           </NuxtLink>
         </div>
       </div>
@@ -386,7 +386,7 @@ const currentIndex = ref<number | null>(null)
                 </div>
                 <div class="contact-form__btn-box">
                   <button
-                    class="contact-form__btn-box__btn text-transform-uppercase text-color-w"
+                    class="contact-form__btn-box__btn text-transform-uppercase text-color-w f-500"
                     type="submit"
                   >
                     Küldés
@@ -451,7 +451,7 @@ const currentIndex = ref<number | null>(null)
         </div>
         <div class="FAQ-content__link-content text-center">
           <NuxtLink
-            class="FAQ-content__link-content__NuxtLink text-transform-uppercase text-color-w"
+            class="FAQ-content__link-content__NuxtLink text-transform-uppercase text-color-w f-600"
           >
             ÖSSZES KÉRDÉS MEGTEKINTÉSE
           </NuxtLink>
@@ -472,7 +472,7 @@ const currentIndex = ref<number | null>(null)
           >
             <NuxtImg
               class="blog-content__img-text-box__div__img"
-              :src="`http://127.0.0.1:8000/storage/${post.image}`"
+              :src="`https://fuggonyoazis.hu/api/public/storage/${post.image}`"
               alt="{{ post.title }}"
             />
             <div class="blog-content__img-text-box__div__tBox">

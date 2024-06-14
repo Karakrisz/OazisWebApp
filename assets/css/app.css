@@ -240,9 +240,14 @@ ul {
   width: 100%;
 }
 
+.supage-content__img {
+  width: 50%;
+}
+
 .products-content__link-content__NuxtLink,
 .contact-form__btn-box__btn,
-.FAQ-content__link-content__NuxtLink {
+.FAQ-content__link-content__NuxtLink,
+.supage-content__link-box__NuxtLink {
   background: #1c362b;
 }
 
@@ -257,7 +262,8 @@ ul {
 .carousel-item__NuxtLink,
 .products-content__link-content__NuxtLink,
 .contact-form__btn-box__btn,
-.FAQ-content__link-content__NuxtLink {
+.FAQ-content__link-content__NuxtLink,
+.supage-content__link-box__NuxtLink {
   border-radius: 2em;
 }
 
@@ -272,7 +278,8 @@ ul {
 
 .products-content__h2,
 .FAQ-content__h3,
-.blog-content__h4 {
+.blog-content__h4,
+.supage-content__h2 {
   padding: 2em 0;
 }
 
@@ -284,7 +291,8 @@ ul {
 .carousel-item__NuxtLink,
 .products-content__link-content__NuxtLink,
 .contact-form__btn-box__btn,
-.FAQ-content__link-content__NuxtLink {
+.FAQ-content__link-content__NuxtLink,
+.supage-content__link-box__NuxtLink {
   padding: 0.5em 1.5em;
 }
 
@@ -346,10 +354,20 @@ ul {
   margin-left: 1.3em;
 }
 
-.header-logo-user-box__login-box__link__img {
-  width: 1em;
-  height: 1em;
+.header-logo-user-box__login-box__link__img,
+.header-logo-user-box__login-box__link__img--format {
   margin-left: 0.3em;
+}
+
+.header-logo-user-box__login-box__link__img {
+  width: 1.5em;
+  height: 1.5em;
+  top: 0.2em;
+}
+.header-logo-user-box__login-box__link__img--format {
+  width: 2em;
+  height: 2em;
+  top: 0.5em;
 }
 
 .menu__list {
@@ -522,7 +540,8 @@ ul {
 
 /********************  Blog formating start **********************/
 
-.blog-content {
+.blog-content,
+.supage-content {
   padding: 0 4em 2em 4em;
 }
 
@@ -569,6 +588,21 @@ ul {
   padding-left: 20%;
 }
 
+.copyright-content {
+  background: #0a1310;
+}
+
+.supage-content__link-box {
+  padding: 1.3em 0 0.5em 0;
+}
+
+.supage-content__img {
+  margin-bottom: 1em;
+}
+
+.supage-content h3 {
+  margin: 1em 0;
+}
 /********************  Footer formating end **********************/
 
 /********************  Media formating start **********************/
@@ -587,7 +621,8 @@ ul {
   .FAQ-content {
     padding: 0 5em;
   }
-  .blog-content {
+  .blog-content,
+  .supage-content {
     padding: 0 5em 3em 5em;
   }
   .products-content,
@@ -636,7 +671,8 @@ ul {
   .carousel-item__NuxtLink,
   .products-content__link-content__NuxtLink,
   .contact-form__btn-box__btn,
-  .FAQ-content__link-content__NuxtLink {
+  .FAQ-content__link-content__NuxtLink,
+  .supage-content__link-box__NuxtLink {
     font-size: 1.3rem;
     padding: 0.6em 1.6em;
   }
@@ -653,7 +689,8 @@ ul {
   .products-content__h2,
   .navigation-content__h3,
   .FAQ-content__h3,
-  .blog-content__h4 {
+  .blog-content__h4,
+  .supage-content__h2 {
     font-size: 2rem;
   }
   .navigation-content__link-content__div__h4 {
@@ -729,7 +766,8 @@ ul {
   .FAQ-content {
     padding: 0 5em;
   }
-  .blog-content {
+  .blog-content,
+  .supage-content {
     padding: 0 5em 3em 5em;
   }
   .products-content,
@@ -778,7 +816,8 @@ ul {
   .carousel-item__NuxtLink,
   .products-content__link-content__NuxtLink,
   .contact-form__btn-box__btn,
-  .FAQ-content__link-content__NuxtLink {
+  .FAQ-content__link-content__NuxtLink,
+  .supage-content__link-box__NuxtLink {
     font-size: 1.3rem;
     padding: 0.6em 1.6em;
   }
@@ -795,7 +834,8 @@ ul {
   .products-content__h2,
   .navigation-content__h3,
   .FAQ-content__h3,
-  .blog-content__h4 {
+  .blog-content__h4,
+  .supage-content__h2 {
     font-size: 2rem;
   }
   .navigation-content__link-content__div__h4 {
@@ -881,7 +921,8 @@ ul {
   .footer-content {
     padding: 5em;
   }
-  .blog-content {
+  .blog-content,
+  .supage-content {
     padding: 0 5em 3em 5em;
   }
   .navigation-content {
@@ -900,7 +941,7 @@ ul {
     font-size: 1.1rem;
   }
   .header-logo-user-box__search-box__img {
-    top: 0.75em;
+    top: 0.5em;
     width: 2.3em;
   }
   .slider-content__carousel-content {
@@ -920,7 +961,8 @@ ul {
   .carousel-item__NuxtLink,
   .products-content__link-content__NuxtLink,
   .contact-form__btn-box__btn,
-  .FAQ-content__link-content__NuxtLink {
+  .FAQ-content__link-content__NuxtLink,
+  .supage-content__link-box__NuxtLink {
     font-size: 1.2rem;
     padding: 0.6em 1.6em;
   }
@@ -940,7 +982,8 @@ ul {
   .products-content__h2,
   .navigation-content__h3,
   .FAQ-content__h3,
-  .blog-content__h4 {
+  .blog-content__h4,
+  .supage-content__h2 {
     font-size: 1.8rem;
   }
   .navigation-content__link-content__div__h4 {
@@ -1016,7 +1059,8 @@ ul {
   .FAQ-content {
     padding: 0 5em;
   }
-  .blog-content {
+  .blog-content,
+  .supage-content {
     padding: 0 5em 3em 5em;
   }
   .products-content,
@@ -1065,7 +1109,8 @@ ul {
   .carousel-item__NuxtLink,
   .products-content__link-content__NuxtLink,
   .contact-form__btn-box__btn,
-  .FAQ-content__link-content__NuxtLink {
+  .FAQ-content__link-content__NuxtLink,
+  .supage-content__link-box__NuxtLink {
     font-size: 1.1rem;
     padding: 0.6em 1.6em;
   }
@@ -1085,7 +1130,8 @@ ul {
   .products-content__h2,
   .navigation-content__h3,
   .FAQ-content__h3,
-  .blog-content__h4 {
+  .blog-content__h4,
+  .supage-content__h2 {
     font-size: 1.6rem;
   }
   .navigation-content__link-content__div__h4 {
@@ -1161,7 +1207,8 @@ ul {
   .FAQ-content {
     padding: 0 5em;
   }
-  .blog-content {
+  .blog-content,
+  .supage-content {
     padding: 0 5em 3em 5em;
   }
   .products-content,
@@ -1207,7 +1254,8 @@ ul {
   .carousel-item__NuxtLink,
   .products-content__link-content__NuxtLink,
   .contact-form__btn-box__btn,
-  .FAQ-content__link-content__NuxtLink {
+  .FAQ-content__link-content__NuxtLink,
+  .supage-content__link-box__NuxtLink {
     font-size: 1rem;
     padding: 0.6em 1.6em;
   }
@@ -1227,7 +1275,8 @@ ul {
   .products-content__h2,
   .navigation-content__h3,
   .FAQ-content__h3,
-  .blog-content__h4 {
+  .blog-content__h4,
+  .supage-content__h2 {
     font-size: 1.5rem;
   }
   .navigation-content__link-content__div__h4 {
@@ -1303,7 +1352,8 @@ ul {
   .FAQ-content {
     padding: 0 4em;
   }
-  .blog-content {
+  .blog-content,
+  .supage-content {
     padding: 0 4em 3em 4em;
   }
   .products-content,
@@ -1349,7 +1399,8 @@ ul {
   .carousel-item__NuxtLink,
   .products-content__link-content__NuxtLink,
   .contact-form__btn-box__btn,
-  .FAQ-content__link-content__NuxtLink {
+  .FAQ-content__link-content__NuxtLink,
+  .supage-content__link-box__NuxtLink {
     font-size: 0.9rem;
     padding: 0.6em 1.6em;
   }
@@ -1369,7 +1420,8 @@ ul {
   .products-content__h2,
   .navigation-content__h3,
   .FAQ-content__h3,
-  .blog-content__h4 {
+  .blog-content__h4,
+  .supage-content__h2 {
     font-size: 1.3rem;
   }
   .navigation-content__link-content__div__h4 {
@@ -1446,7 +1498,8 @@ ul {
   .FAQ-content {
     padding: 0 4em;
   }
-  .blog-content {
+  .blog-content,
+  .supage-content {
     padding: 0 4em 3em 4em;
   }
   .products-content,
@@ -1495,7 +1548,8 @@ ul {
   .carousel-item__NuxtLink,
   .products-content__link-content__NuxtLink,
   .contact-form__btn-box__btn,
-  .FAQ-content__link-content__NuxtLink {
+  .FAQ-content__link-content__NuxtLink,
+  .supage-content__link-box__NuxtLink {
     font-size: 0.9rem;
     padding: 0.6em 1.6em;
   }
@@ -1515,7 +1569,8 @@ ul {
   .products-content__h2,
   .navigation-content__h3,
   .FAQ-content__h3,
-  .blog-content__h4 {
+  .blog-content__h4,
+  .supage-content__h2 {
     font-size: 1.3rem;
   }
   .navigation-content__link-content__div__h4 {
@@ -1592,7 +1647,8 @@ ul {
   .FAQ-content {
     padding: 0 3em;
   }
-  .blog-content {
+  .blog-content,
+  .supage-content {
     padding: 0 3em 3em 3em;
   }
   .products-content,
@@ -1638,7 +1694,8 @@ ul {
   .carousel-item__NuxtLink,
   .products-content__link-content__NuxtLink,
   .contact-form__btn-box__btn,
-  .FAQ-content__link-content__NuxtLink {
+  .FAQ-content__link-content__NuxtLink,
+  .supage-content__link-box__NuxtLink {
     font-size: 0.9rem;
     padding: 0.6em 1.6em;
   }
@@ -1659,7 +1716,8 @@ ul {
   .products-content__h2,
   .navigation-content__h3,
   .FAQ-content__h3,
-  .blog-content__h4 {
+  .blog-content__h4,
+  .supage-content__h2 {
     font-size: 1.3rem;
   }
   .navigation-content__link-content__div__h4 {
@@ -1828,7 +1886,8 @@ ul {
   .FAQ-content {
     padding: 0 3em;
   }
-  .blog-content {
+  .blog-content,
+  .supage-content {
     padding: 0 3em 2em 3em;
   }
   .products-content,
@@ -1858,6 +1917,12 @@ ul {
     top: 0.55em;
     width: 1.7em;
   }
+  .header-logo-user-box__login-box__link {
+    padding: 0.5em 1em 1em 1em;
+  }
+  .header-logo-user-box__login-box__link--margin {
+    padding: 0em 1em;
+  }
   .slider-content__carousel-content {
     width: 35em;
     padding: 1.5em;
@@ -1875,7 +1940,8 @@ ul {
   .carousel-item__NuxtLink,
   .products-content__link-content__NuxtLink,
   .contact-form__btn-box__btn,
-  .FAQ-content__link-content__NuxtLink {
+  .FAQ-content__link-content__NuxtLink,
+  .supage-content__link-box__NuxtLink {
     font-size: 0.9rem;
     padding: 0.6em 1.6em;
   }
@@ -1896,7 +1962,8 @@ ul {
   .products-content__h2,
   .navigation-content__h3,
   .FAQ-content__h3,
-  .blog-content__h4 {
+  .blog-content__h4,
+  .supage-content__h2 {
     font-size: 1.3rem;
   }
   .navigation-content__link-content__div__h4 {
@@ -1966,6 +2033,9 @@ ul {
   .footer-content__img-content__img {
     width: 50%;
   }
+  .supage-content__img {
+    width: 100%;
+  }
 }
 
 @media (min-width: 610px) and (max-width: 767px) {
@@ -2008,6 +2078,12 @@ ul {
     margin: 1.5em 0 0.7em 0;
     display: flex;
     justify-content: space-between;
+  }
+  .header-logo-user-box__login-box__link {
+    padding: 0.5em 1em 1em 1em;
+  }
+  .header-logo-user-box__login-box__link--margin {
+    padding: 0em 1em;
   }
   .hamburger {
     background-color: #fbfadd;
@@ -2089,7 +2165,8 @@ ul {
   .FAQ-content {
     padding: 0 2em;
   }
-  .blog-content {
+  .blog-content,
+  .supage-content {
     padding: 0 2em 2em 2em;
   }
   .products-content,
@@ -2140,7 +2217,8 @@ ul {
   .carousel-item__NuxtLink,
   .products-content__link-content__NuxtLink,
   .contact-form__btn-box__btn,
-  .FAQ-content__link-content__NuxtLink {
+  .FAQ-content__link-content__NuxtLink,
+  .supage-content__link-box__NuxtLink {
     font-size: 0.9rem;
     padding: 0.6em 1.6em;
   }
@@ -2161,7 +2239,8 @@ ul {
   .products-content__h2,
   .navigation-content__h3,
   .FAQ-content__h3,
-  .blog-content__h4 {
+  .blog-content__h4,
+  .supage-content__h2 {
     font-size: 1.2rem;
   }
   .navigation-content__link-content__div__h4 {
@@ -2235,6 +2314,9 @@ ul {
   .footer-content__img-content {
     display: unset;
     margin: 2.5em 0;
+  }
+  .supage-content__img {
+    width: 100%;
   }
 }
 
