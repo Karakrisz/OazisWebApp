@@ -1,7 +1,35 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 
-const { data: itemsPost } = await useFetch('http://127.0.0.1:8000/json-posts')
+interface Post {
+  id: number
+  title: string
+  body: string
+  image: string
+}
+
+const itemsPost = ref<Post[] | null>(null)
+const error = ref<string | null>(null)
+const loading = ref(false)
+
+async function fetchPosts() {
+  loading.value = true
+  try {
+    const response = await fetch('http://127.0.0.1:8000/json-posts')
+    if (!response.ok) throw new Error('Failed to fetch posts')
+    const data = await response.json()
+    itemsPost.value = data
+  } catch (e) {
+    error.value = (e as Error).message
+    console.error('Error fetching posts:', (e as Error).message)
+  } finally {
+    loading.value = false
+  }
+}
+
+onMounted(() => {
+  fetchPosts()
+})
 
 const sliderElem = ref([
   {
@@ -444,12 +472,12 @@ const currentIndex = ref<number | null>(null)
               <h3 class="blog-content__img-text-box__div__h3">
                 {{ post.title }}
               </h3>
-              <ClientOnly>
-                <p
-                  class="blog-content__img-text-box__div__p"
-                  v-html="post.body"
-                />
-              </ClientOnly>
+
+              <p
+                class="blog-content__img-text-box__div__p"
+                v-html="post.body"
+              />
+
               <div class="blog-content__img-text-box__div__link-box d-flex">
                 <NuxtLink
                   :to="`/posts/${post.id}`"

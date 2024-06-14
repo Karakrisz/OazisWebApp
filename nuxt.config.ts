@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/app.css'],
-
+  ssr: true,
   app: {
     head: {
       title: 'Függöny Oázis',
@@ -12,8 +12,13 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: '' },
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Ide kell a szöveg, függönyoket varnak budapesten',
+        },
         { name: 'format-detection', content: 'telephone=no' },
+        { hid: 'robots', name: 'robots', content: 'index, follow' },
         {
           'http-equiv': 'Content-Security-Policy',
           content: `
@@ -38,5 +43,5 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxt/image"]
+  modules: ['@nuxt/image', "@nuxtjs/sitemap"],
 })
