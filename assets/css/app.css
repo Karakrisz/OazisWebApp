@@ -424,6 +424,10 @@ ul {
   margin-bottom: 2em;
 }
 
+.slider-content__img {
+  object-fit: cover;
+}
+
 /********************  Slider formating end **********************/
 
 /********************  Products formating start **********************/

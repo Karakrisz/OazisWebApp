@@ -1,35 +1,32 @@
-import { version, unref, inject, defineComponent, provide, shallowReactive, h, ref, watch, Suspense, nextTick, Transition, computed, resolveComponent, useSSRContext, createApp, effectScope, reactive, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, hasInjectionContext, getCurrentInstance, toRef, shallowRef, isReadonly, isRef, isShallow, isReactive, toRaw, defineAsyncComponent, mergeProps, withCtx, openBlock, createBlock, Fragment, createTextVNode, toDisplayString } from 'file:///Applications/XAMPP/xamppfiles/htdocs/biztosAlkuszApp/node_modules/vue/index.mjs';
-import { joinRelativeURL, hasProtocol, joinURL, parseURL, parseQuery, withQuery, isScriptProtocol, withTrailingSlash, withoutTrailingSlash } from 'file:///Applications/XAMPP/xamppfiles/htdocs/biztosAlkuszApp/node_modules/ufo/dist/index.mjs';
-import { $fetch } from 'file:///Applications/XAMPP/xamppfiles/htdocs/biztosAlkuszApp/node_modules/ofetch/dist/node.mjs';
-import { createHooks } from 'file:///Applications/XAMPP/xamppfiles/htdocs/biztosAlkuszApp/node_modules/hookable/dist/index.mjs';
-import { getContext } from 'file:///Applications/XAMPP/xamppfiles/htdocs/biztosAlkuszApp/node_modules/unctx/dist/index.mjs';
-import { createError as createError$1, sanitizeStatusCode } from 'file:///Applications/XAMPP/xamppfiles/htdocs/biztosAlkuszApp/node_modules/h3/dist/index.mjs';
-import { getActiveHead } from 'file:///Applications/XAMPP/xamppfiles/htdocs/biztosAlkuszApp/node_modules/unhead/dist/index.mjs';
-import { defineHeadPlugin } from 'file:///Applications/XAMPP/xamppfiles/htdocs/biztosAlkuszApp/node_modules/@unhead/shared/dist/index.mjs';
-import { RouterView, createMemoryHistory, createRouter, START_LOCATION } from 'file:///Applications/XAMPP/xamppfiles/htdocs/biztosAlkuszApp/node_modules/vue-router/dist/vue-router.node.mjs';
-import { toRouteMatcher, createRouter as createRouter$1 } from 'file:///Applications/XAMPP/xamppfiles/htdocs/biztosAlkuszApp/node_modules/radix3/dist/index.mjs';
-import { defu } from 'file:///Applications/XAMPP/xamppfiles/htdocs/biztosAlkuszApp/node_modules/defu/dist/defu.mjs';
-import { ssrRenderSuspense, ssrRenderComponent, ssrRenderVNode, ssrRenderAttrs, ssrRenderAttr, ssrRenderClass, ssrRenderList, ssrInterpolate } from 'file:///Applications/XAMPP/xamppfiles/htdocs/biztosAlkuszApp/node_modules/vue/server-renderer/index.mjs';
+import { version, ref, watchEffect, watch, getCurrentInstance, defineComponent, computed, h, provide, shallowReactive, inject, Suspense, nextTick, Transition, unref, resolveComponent, useSSRContext, createApp, effectScope, reactive, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, hasInjectionContext, toRef, shallowRef, isReadonly, isRef, isShallow, isReactive, toRaw, defineAsyncComponent, mergeProps, withCtx, openBlock, createBlock, Fragment, createTextVNode, toDisplayString } from 'file:///Applications/XAMPP/xamppfiles/htdocs/OazisWebApp/node_modules/vue/index.mjs';
+import { $fetch } from 'file:///Applications/XAMPP/xamppfiles/htdocs/OazisWebApp/node_modules/ofetch/dist/node.mjs';
+import { createHooks } from 'file:///Applications/XAMPP/xamppfiles/htdocs/OazisWebApp/node_modules/hookable/dist/index.mjs';
+import { getContext } from 'file:///Applications/XAMPP/xamppfiles/htdocs/OazisWebApp/node_modules/unctx/dist/index.mjs';
+import { appendHeader, createError as createError$1, sanitizeStatusCode } from 'file:///Applications/XAMPP/xamppfiles/htdocs/OazisWebApp/node_modules/h3/dist/index.mjs';
+import { getActiveHead } from 'file:///Applications/XAMPP/xamppfiles/htdocs/OazisWebApp/node_modules/unhead/dist/index.mjs';
+import { defineHeadPlugin, composableNames } from 'file:///Applications/XAMPP/xamppfiles/htdocs/OazisWebApp/node_modules/@unhead/shared/dist/index.mjs';
+import { RouterView, createMemoryHistory, createRouter, START_LOCATION } from 'file:///Applications/XAMPP/xamppfiles/htdocs/OazisWebApp/node_modules/vue-router/dist/vue-router.node.mjs';
+import { toRouteMatcher, createRouter as createRouter$1 } from 'file:///Applications/XAMPP/xamppfiles/htdocs/OazisWebApp/node_modules/radix3/dist/index.mjs';
+import { defu } from 'file:///Applications/XAMPP/xamppfiles/htdocs/OazisWebApp/node_modules/defu/dist/defu.mjs';
+import { encodeParam, hasProtocol, joinURL, parseURL, parseQuery, withLeadingSlash, withQuery, isScriptProtocol, withTrailingSlash, withoutTrailingSlash, encodePath } from 'file:///Applications/XAMPP/xamppfiles/htdocs/OazisWebApp/node_modules/ufo/dist/index.mjs';
+import { ssrRenderSuspense, ssrRenderComponent, ssrRenderVNode, ssrRenderAttrs, ssrRenderClass, ssrRenderList, ssrRenderAttr, ssrInterpolate } from 'file:///Applications/XAMPP/xamppfiles/htdocs/OazisWebApp/node_modules/vue/server-renderer/index.mjs';
 import { a as useRuntimeConfig$1 } from '../runtime.mjs';
-import 'file:///Applications/XAMPP/xamppfiles/htdocs/biztosAlkuszApp/node_modules/destr/dist/index.mjs';
-import 'file:///Applications/XAMPP/xamppfiles/htdocs/biztosAlkuszApp/node_modules/unenv/runtime/fetch/index.mjs';
-import 'file:///Applications/XAMPP/xamppfiles/htdocs/biztosAlkuszApp/node_modules/klona/dist/index.mjs';
-import 'file:///Applications/XAMPP/xamppfiles/htdocs/biztosAlkuszApp/node_modules/scule/dist/index.mjs';
-import 'file:///Applications/XAMPP/xamppfiles/htdocs/biztosAlkuszApp/node_modules/ohash/dist/index.mjs';
-import 'file:///Applications/XAMPP/xamppfiles/htdocs/biztosAlkuszApp/node_modules/unstorage/dist/index.mjs';
-import 'file:///Applications/XAMPP/xamppfiles/htdocs/biztosAlkuszApp/node_modules/unstorage/drivers/fs.mjs';
-import 'file:///Applications/XAMPP/xamppfiles/htdocs/biztosAlkuszApp/node_modules/nuxt/dist/core/runtime/nitro/cache-driver.js';
-import 'file:///Applications/XAMPP/xamppfiles/htdocs/biztosAlkuszApp/node_modules/unstorage/drivers/fs-lite.mjs';
+import 'file:///Applications/XAMPP/xamppfiles/htdocs/OazisWebApp/node_modules/destr/dist/index.mjs';
+import 'file:///Applications/XAMPP/xamppfiles/htdocs/OazisWebApp/node_modules/unenv/runtime/fetch/index.mjs';
+import 'file:///Applications/XAMPP/xamppfiles/htdocs/OazisWebApp/node_modules/klona/dist/index.mjs';
+import 'file:///Applications/XAMPP/xamppfiles/htdocs/OazisWebApp/node_modules/scule/dist/index.mjs';
+import 'file:///Applications/XAMPP/xamppfiles/htdocs/OazisWebApp/node_modules/ohash/dist/index.mjs';
+import 'file:///Applications/XAMPP/xamppfiles/htdocs/OazisWebApp/node_modules/unstorage/dist/index.mjs';
+import 'file:///Applications/XAMPP/xamppfiles/htdocs/OazisWebApp/node_modules/unstorage/drivers/fs.mjs';
+import 'file:///Applications/XAMPP/xamppfiles/htdocs/OazisWebApp/node_modules/nuxt/dist/core/runtime/nitro/cache-driver.js';
+import 'file:///Applications/XAMPP/xamppfiles/htdocs/OazisWebApp/node_modules/unstorage/drivers/fs-lite.mjs';
 import 'node:fs';
 import 'node:url';
-import 'file:///Applications/XAMPP/xamppfiles/htdocs/biztosAlkuszApp/node_modules/pathe/dist/index.mjs';
+import 'file:///Applications/XAMPP/xamppfiles/htdocs/OazisWebApp/node_modules/pathe/dist/index.mjs';
+import 'file:///Applications/XAMPP/xamppfiles/htdocs/OazisWebApp/node_modules/ipx/dist/index.mjs';
 
 const appConfig = useRuntimeConfig$1().app;
 const baseURL = () => appConfig.baseURL;
-const publicAssetsURL = (...path) => {
-  const publicBase = appConfig.cdnURL || appConfig.baseURL;
-  return path.length ? joinRelativeURL(publicBase, ...path) : publicBase;
-};
 if (!globalThis.$fetch) {
   globalThis.$fetch = $fetch.create({
     baseURL: baseURL()
@@ -393,6 +390,33 @@ function injectHead() {
     console.warn("Unhead is missing Vue context, falling back to shared context. This may have unexpected results.");
   return head || getActiveHead();
 }
+function useHead(input, options = {}) {
+  const head = options.head || injectHead();
+  if (head) {
+    if (!head.ssr)
+      return clientUseHead(head, input, options);
+    return head.push(input, options);
+  }
+}
+function clientUseHead(head, input, options = {}) {
+  const deactivated = ref(false);
+  const resolvedInput = ref({});
+  watchEffect(() => {
+    resolvedInput.value = deactivated.value ? {} : resolveUnrefHeadInput(input);
+  });
+  const entry2 = head.push(resolvedInput.value, options);
+  watch(resolvedInput, (e) => {
+    entry2.patch(e);
+  });
+  getCurrentInstance();
+  return entry2;
+}
+const coreComposableNames = [
+  "injectHead"
+];
+({
+  "@unhead/vue": [...coreComposableNames, ...composableNames]
+});
 const unhead_KgADcZ0jPj = /* @__PURE__ */ defineNuxtPlugin({
   name: "nuxt:head",
   enforce: "pre",
@@ -555,20 +579,28 @@ async function getRouteRules(url) {
 }
 const _routes = [
   {
-    name: "ajanlatkeres",
-    path: "/ajanlatkeres",
+    name: "akciok",
+    path: "/akciok",
     meta: {},
     alias: [],
     redirect: void 0 ,
-    component: () => import('./ajanlatkeres-DMCjda17.mjs').then((m) => m.default || m)
+    component: () => import('./akciok-BD8QIvWH.mjs').then((m) => m.default || m)
   },
   {
-    name: "dokumentumok",
-    path: "/dokumentumok",
+    name: "dekoracio",
+    path: "/dekoracio",
     meta: {},
     alias: [],
     redirect: void 0 ,
-    component: () => import('./dokumentumok-t24B2Uw2.mjs').then((m) => m.default || m)
+    component: () => import('./dekoracio-DrryiiBl.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "fuggony",
+    path: "/fuggony",
+    meta: {},
+    alias: [],
+    redirect: void 0 ,
+    component: () => import('./fuggony-DnxpBzv3.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
@@ -576,7 +608,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0 ,
-    component: () => import('./index-0c2Vw0VV.mjs').then((m) => m.default || m)
+    component: () => import('./index-DN9lzotL.mjs').then((m) => m.default || m)
   },
   {
     name: "kapcsolat",
@@ -584,23 +616,39 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0 ,
-    component: () => import('./kapcsolat-DyqwayWl.mjs').then((m) => m.default || m)
+    component: () => import('./kapcsolat-BUZvJa2k.mjs').then((m) => m.default || m)
   },
   {
-    name: "partnerek",
-    path: "/partnerek",
+    name: "lakastextil",
+    path: "/lakastextil",
     meta: {},
     alias: [],
     redirect: void 0 ,
-    component: () => import('./partnerek-qhkIYlgE.mjs').then((m) => m.default || m)
+    component: () => import('./lakastextil-zLDWfGYL.mjs').then((m) => m.default || m)
   },
   {
-    name: "szolgaltatasok",
-    path: "/szolgaltatasok",
+    name: "posts-id",
+    path: "/posts/:id()",
     meta: {},
     alias: [],
     redirect: void 0 ,
-    component: () => import('./szolgaltatasok-Kk9OzeJf.mjs').then((m) => m.default || m)
+    component: () => import('./_id_-XUgNfuJl.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "rovidaru",
+    path: "/rovidaru",
+    meta: {},
+    alias: [],
+    redirect: void 0 ,
+    component: () => import('./rovidaru-Co0vb3CM.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "sotetito",
+    path: "/sotetito",
+    meta: {},
+    alias: [],
+    redirect: void 0 ,
+    component: () => import('./sotetito-Xthi9i-5.mjs').then((m) => m.default || m)
   }
 ];
 const _wrapIf = (component, props, slots) => {
@@ -891,6 +939,58 @@ const plugin = /* @__PURE__ */ defineNuxtPlugin({
     return { provide: { router } };
   }
 });
+function useRequestEvent(nuxtApp = /* @__PURE__ */ useNuxtApp()) {
+  var _a;
+  return (_a = nuxtApp.ssrContext) == null ? void 0 : _a.event;
+}
+const useStateKeyPrefix = "$s";
+function useState(...args) {
+  const autoKey = typeof args[args.length - 1] === "string" ? args.pop() : void 0;
+  if (typeof args[0] !== "string") {
+    args.unshift(autoKey);
+  }
+  const [_key, init] = args;
+  if (!_key || typeof _key !== "string") {
+    throw new TypeError("[nuxt] [useState] key must be a string: " + _key);
+  }
+  if (init !== void 0 && typeof init !== "function") {
+    throw new Error("[nuxt] [useState] init must be a function: " + init);
+  }
+  const key = useStateKeyPrefix + _key;
+  const nuxtApp = /* @__PURE__ */ useNuxtApp();
+  const state = toRef(nuxtApp.payload.state, key);
+  if (state.value === void 0 && init) {
+    const initialValue = init();
+    if (isRef(initialValue)) {
+      nuxtApp.payload.state[key] = initialValue;
+      return initialValue;
+    }
+    state.value = initialValue;
+  }
+  return state;
+}
+const _0_siteConfig_7pzUtwM1Zj = /* @__PURE__ */ defineNuxtPlugin({
+  name: "nuxt-site-config:init",
+  enforce: "pre",
+  async setup(nuxtApp) {
+    const state = useState("site-config");
+    {
+      const { context } = useRequestEvent();
+      nuxtApp.hooks.hook("app:rendered", () => {
+        state.value = context.siteConfig.get({
+          debug: (/* @__PURE__ */ useRuntimeConfig())["nuxt-site-config"].debug,
+          resolveRefs: true
+        });
+      });
+    }
+    let stack = {};
+    return {
+      provide: {
+        nuxtSiteConfig: stack
+      }
+    };
+  }
+});
 function definePayloadReducer(name, reduce) {
   {
     (/* @__PURE__ */ useNuxtApp()).ssrContext._payloadReducers[name] = reduce;
@@ -919,9 +1019,572 @@ const components_plugin_KR1HBZs4kY = /* @__PURE__ */ defineNuxtPlugin({
 const plugins = [
   unhead_KgADcZ0jPj,
   plugin,
+  _0_siteConfig_7pzUtwM1Zj,
   revive_payload_server_eJ33V7gbc6,
   components_plugin_KR1HBZs4kY
 ];
+async function imageMeta(_ctx, url) {
+  const meta = await _imageMeta(url).catch((err) => {
+    console.error("Failed to get image meta for " + url, err + "");
+    return {
+      width: 0,
+      height: 0,
+      ratio: 0
+    };
+  });
+  return meta;
+}
+async function _imageMeta(url) {
+  {
+    const imageMeta2 = await import('file:///Applications/XAMPP/xamppfiles/htdocs/OazisWebApp/node_modules/image-meta/dist/index.mjs').then((r) => r.imageMeta);
+    const data = await fetch(url).then((res) => res.buffer());
+    const metadata = imageMeta2(data);
+    if (!metadata) {
+      throw new Error(`No metadata could be extracted from the image \`${url}\`.`);
+    }
+    const { width, height } = metadata;
+    const meta = {
+      width,
+      height,
+      ratio: width && height ? width / height : void 0
+    };
+    return meta;
+  }
+}
+function createMapper(map) {
+  return (key) => {
+    return key ? map[key] || key : map.missingValue;
+  };
+}
+function createOperationsGenerator({ formatter, keyMap, joinWith = "/", valueMap } = {}) {
+  if (!formatter) {
+    formatter = (key, value) => `${key}=${value}`;
+  }
+  if (keyMap && typeof keyMap !== "function") {
+    keyMap = createMapper(keyMap);
+  }
+  const map = valueMap || {};
+  Object.keys(map).forEach((valueKey) => {
+    if (typeof map[valueKey] !== "function") {
+      map[valueKey] = createMapper(map[valueKey]);
+    }
+  });
+  return (modifiers = {}) => {
+    const operations = Object.entries(modifiers).filter(([_, value]) => typeof value !== "undefined").map(([key, value]) => {
+      const mapper = map[key];
+      if (typeof mapper === "function") {
+        value = mapper(modifiers[key]);
+      }
+      key = typeof keyMap === "function" ? keyMap(key) : key;
+      return formatter(key, value);
+    });
+    return operations.join(joinWith);
+  };
+}
+function parseSize(input = "") {
+  if (typeof input === "number") {
+    return input;
+  }
+  if (typeof input === "string") {
+    if (input.replace("px", "").match(/^\d+$/g)) {
+      return parseInt(input, 10);
+    }
+  }
+}
+function parseDensities(input = "") {
+  if (input === void 0 || !input.length) {
+    return [];
+  }
+  const densities = /* @__PURE__ */ new Set();
+  for (const density of input.split(" ")) {
+    const d = parseInt(density.replace("x", ""));
+    if (d) {
+      densities.add(d);
+    }
+  }
+  return Array.from(densities);
+}
+function checkDensities(densities) {
+  if (densities.length === 0) {
+    throw new Error("`densities` must not be empty, configure to `1` to render regular size only (DPR 1.0)");
+  }
+}
+function parseSizes(input) {
+  const sizes = {};
+  if (typeof input === "string") {
+    for (const entry2 of input.split(/[\s,]+/).filter((e) => e)) {
+      const s = entry2.split(":");
+      if (s.length !== 2) {
+        sizes["1px"] = s[0].trim();
+      } else {
+        sizes[s[0].trim()] = s[1].trim();
+      }
+    }
+  } else {
+    Object.assign(sizes, input);
+  }
+  return sizes;
+}
+function prerenderStaticImages(src = "", srcset = "") {
+  const paths = [
+    src,
+    ...srcset.split(", ").map((s) => s.trim().split(" ")[0].trim())
+  ].filter((s) => s && s.includes("/_ipx/"));
+  if (!paths.length) {
+    return;
+  }
+  appendHeader(
+    useRequestEvent(),
+    "x-nitro-prerender",
+    paths.map((p) => encodeURIComponent(p)).join(", ")
+  );
+}
+function createImage(globalOptions) {
+  const ctx = {
+    options: globalOptions
+  };
+  const getImage2 = (input, options = {}) => {
+    const image = resolveImage(ctx, input, options);
+    {
+      prerenderStaticImages(image.url);
+    }
+    return image;
+  };
+  const $img = (input, modifiers = {}, options = {}) => {
+    return getImage2(input, {
+      ...options,
+      modifiers: defu(modifiers, options.modifiers || {})
+    }).url;
+  };
+  for (const presetName in globalOptions.presets) {
+    $img[presetName] = (source, modifiers, options) => $img(source, modifiers, { ...globalOptions.presets[presetName], ...options });
+  }
+  $img.options = globalOptions;
+  $img.getImage = getImage2;
+  $img.getMeta = (input, options) => getMeta(ctx, input, options);
+  $img.getSizes = (input, options) => getSizes(ctx, input, options);
+  ctx.$img = $img;
+  return $img;
+}
+async function getMeta(ctx, input, options) {
+  const image = resolveImage(ctx, input, { ...options });
+  if (typeof image.getMeta === "function") {
+    return await image.getMeta();
+  } else {
+    return await imageMeta(ctx, image.url);
+  }
+}
+function resolveImage(ctx, input, options) {
+  var _a, _b;
+  if (typeof input !== "string" || input === "") {
+    throw new TypeError(`input must be a string (received ${typeof input}: ${JSON.stringify(input)})`);
+  }
+  if (input.startsWith("data:")) {
+    return {
+      url: input
+    };
+  }
+  const { provider, defaults } = getProvider(ctx, options.provider || ctx.options.provider);
+  const preset = getPreset(ctx, options.preset);
+  input = hasProtocol(input) ? input : withLeadingSlash(input);
+  if (!provider.supportsAlias) {
+    for (const base in ctx.options.alias) {
+      if (input.startsWith(base)) {
+        input = joinURL(ctx.options.alias[base], input.substr(base.length));
+      }
+    }
+  }
+  if (provider.validateDomains && hasProtocol(input)) {
+    const inputHost = parseURL(input).host;
+    if (!ctx.options.domains.find((d) => d === inputHost)) {
+      return {
+        url: input
+      };
+    }
+  }
+  const _options = defu(options, preset, defaults);
+  _options.modifiers = { ..._options.modifiers };
+  const expectedFormat = _options.modifiers.format;
+  if ((_a = _options.modifiers) == null ? void 0 : _a.width) {
+    _options.modifiers.width = parseSize(_options.modifiers.width);
+  }
+  if ((_b = _options.modifiers) == null ? void 0 : _b.height) {
+    _options.modifiers.height = parseSize(_options.modifiers.height);
+  }
+  const image = provider.getImage(input, _options, ctx);
+  image.format = image.format || expectedFormat || "";
+  return image;
+}
+function getProvider(ctx, name) {
+  const provider = ctx.options.providers[name];
+  if (!provider) {
+    throw new Error("Unknown provider: " + name);
+  }
+  return provider;
+}
+function getPreset(ctx, name) {
+  if (!name) {
+    return {};
+  }
+  if (!ctx.options.presets[name]) {
+    throw new Error("Unknown preset: " + name);
+  }
+  return ctx.options.presets[name];
+}
+function getSizes(ctx, input, opts) {
+  var _a, _b, _c, _d, _e;
+  const width = parseSize((_a = opts.modifiers) == null ? void 0 : _a.width);
+  const height = parseSize((_b = opts.modifiers) == null ? void 0 : _b.height);
+  const sizes = parseSizes(opts.sizes);
+  const densities = ((_c = opts.densities) == null ? void 0 : _c.trim()) ? parseDensities(opts.densities.trim()) : ctx.options.densities;
+  checkDensities(densities);
+  const hwRatio = width && height ? height / width : 0;
+  const sizeVariants = [];
+  const srcsetVariants = [];
+  if (Object.keys(sizes).length >= 1) {
+    for (const key in sizes) {
+      const variant = getSizesVariant(key, String(sizes[key]), height, hwRatio, ctx);
+      if (variant === void 0) {
+        continue;
+      }
+      sizeVariants.push({
+        size: variant.size,
+        screenMaxWidth: variant.screenMaxWidth,
+        media: `(max-width: ${variant.screenMaxWidth}px)`
+      });
+      for (const density of densities) {
+        srcsetVariants.push({
+          width: variant._cWidth * density,
+          src: getVariantSrc(ctx, input, opts, variant, density)
+        });
+      }
+    }
+    finaliseSizeVariants(sizeVariants);
+  } else {
+    for (const density of densities) {
+      const key = Object.keys(sizes)[0];
+      let variant = getSizesVariant(key, String(sizes[key]), height, hwRatio, ctx);
+      if (variant === void 0) {
+        variant = {
+          size: "",
+          screenMaxWidth: 0,
+          _cWidth: (_d = opts.modifiers) == null ? void 0 : _d.width,
+          _cHeight: (_e = opts.modifiers) == null ? void 0 : _e.height
+        };
+      }
+      srcsetVariants.push({
+        width: density,
+        src: getVariantSrc(ctx, input, opts, variant, density)
+      });
+    }
+  }
+  finaliseSrcsetVariants(srcsetVariants);
+  const defaultVariant = srcsetVariants[srcsetVariants.length - 1];
+  const sizesVal = sizeVariants.length ? sizeVariants.map((v) => `${v.media ? v.media + " " : ""}${v.size}`).join(", ") : void 0;
+  const suffix = sizesVal ? "w" : "x";
+  const srcsetVal = srcsetVariants.map((v) => `${v.src} ${v.width}${suffix}`).join(", ");
+  return {
+    sizes: sizesVal,
+    srcset: srcsetVal,
+    src: defaultVariant == null ? void 0 : defaultVariant.src
+  };
+}
+function getSizesVariant(key, size, height, hwRatio, ctx) {
+  const screenMaxWidth = ctx.options.screens && ctx.options.screens[key] || parseInt(key);
+  const isFluid = size.endsWith("vw");
+  if (!isFluid && /^\d+$/.test(size)) {
+    size = size + "px";
+  }
+  if (!isFluid && !size.endsWith("px")) {
+    return void 0;
+  }
+  let _cWidth = parseInt(size);
+  if (!screenMaxWidth || !_cWidth) {
+    return void 0;
+  }
+  if (isFluid) {
+    _cWidth = Math.round(_cWidth / 100 * screenMaxWidth);
+  }
+  const _cHeight = hwRatio ? Math.round(_cWidth * hwRatio) : height;
+  return {
+    size,
+    screenMaxWidth,
+    _cWidth,
+    _cHeight
+  };
+}
+function getVariantSrc(ctx, input, opts, variant, density) {
+  return ctx.$img(
+    input,
+    {
+      ...opts.modifiers,
+      width: variant._cWidth ? variant._cWidth * density : void 0,
+      height: variant._cHeight ? variant._cHeight * density : void 0
+    },
+    opts
+  );
+}
+function finaliseSizeVariants(sizeVariants) {
+  var _a;
+  sizeVariants.sort((v1, v2) => v1.screenMaxWidth - v2.screenMaxWidth);
+  let previousMedia = null;
+  for (let i = sizeVariants.length - 1; i >= 0; i--) {
+    const sizeVariant = sizeVariants[i];
+    if (sizeVariant.media === previousMedia) {
+      sizeVariants.splice(i, 1);
+    }
+    previousMedia = sizeVariant.media;
+  }
+  for (let i = 0; i < sizeVariants.length; i++) {
+    sizeVariants[i].media = ((_a = sizeVariants[i + 1]) == null ? void 0 : _a.media) || "";
+  }
+}
+function finaliseSrcsetVariants(srcsetVariants) {
+  srcsetVariants.sort((v1, v2) => v1.width - v2.width);
+  let previousWidth = null;
+  for (let i = srcsetVariants.length - 1; i >= 0; i--) {
+    const sizeVariant = srcsetVariants[i];
+    if (sizeVariant.width === previousWidth) {
+      srcsetVariants.splice(i, 1);
+    }
+    previousWidth = sizeVariant.width;
+  }
+}
+const operationsGenerator = createOperationsGenerator({
+  keyMap: {
+    format: "f",
+    fit: "fit",
+    width: "w",
+    height: "h",
+    resize: "s",
+    quality: "q",
+    background: "b"
+  },
+  joinWith: "&",
+  formatter: (key, val) => encodeParam(key) + "_" + encodeParam(val)
+});
+const getImage = (src, { modifiers = {}, baseURL: baseURL2 } = {}, ctx) => {
+  if (modifiers.width && modifiers.height) {
+    modifiers.resize = `${modifiers.width}x${modifiers.height}`;
+    delete modifiers.width;
+    delete modifiers.height;
+  }
+  const params = operationsGenerator(modifiers) || "_";
+  if (!baseURL2) {
+    baseURL2 = joinURL(ctx.options.nuxt.baseURL, "/_ipx");
+  }
+  return {
+    url: joinURL(baseURL2, params, encodePath(src))
+  };
+};
+const validateDomains = true;
+const supportsAlias = true;
+const ipxStaticRuntime$MvXRdHNMZd = /* @__PURE__ */ Object.freeze({
+  __proto__: null,
+  getImage,
+  supportsAlias,
+  validateDomains
+});
+const imageOptions = {
+  "screens": {
+    "xs": 320,
+    "sm": 640,
+    "md": 768,
+    "lg": 1024,
+    "xl": 1280,
+    "xxl": 1536,
+    "2xl": 1536
+  },
+  "presets": {},
+  "provider": "ipxStatic",
+  "domains": [],
+  "alias": {},
+  "densities": [
+    1,
+    2
+  ],
+  "format": [
+    "webp"
+  ]
+};
+imageOptions.providers = {
+  ["ipxStatic"]: { provider: ipxStaticRuntime$MvXRdHNMZd, defaults: {} }
+};
+const useImage = () => {
+  const config = /* @__PURE__ */ useRuntimeConfig();
+  const nuxtApp = /* @__PURE__ */ useNuxtApp();
+  return nuxtApp.$img || nuxtApp._img || (nuxtApp._img = createImage({
+    ...imageOptions,
+    nuxt: {
+      baseURL: config.app.baseURL
+    }
+  }));
+};
+const baseImageProps = {
+  // input source
+  src: { type: String, required: true },
+  // modifiers
+  format: { type: String, default: void 0 },
+  quality: { type: [Number, String], default: void 0 },
+  background: { type: String, default: void 0 },
+  fit: { type: String, default: void 0 },
+  modifiers: { type: Object, default: void 0 },
+  // options
+  preset: { type: String, default: void 0 },
+  provider: { type: String, default: void 0 },
+  sizes: { type: [Object, String], default: void 0 },
+  densities: { type: String, default: void 0 },
+  preload: { type: Boolean, default: void 0 },
+  // <img> attributes
+  width: { type: [String, Number], default: void 0 },
+  height: { type: [String, Number], default: void 0 },
+  alt: { type: String, default: void 0 },
+  referrerpolicy: { type: String, default: void 0 },
+  usemap: { type: String, default: void 0 },
+  longdesc: { type: String, default: void 0 },
+  ismap: { type: Boolean, default: void 0 },
+  loading: {
+    type: String,
+    default: void 0,
+    validator: (val) => ["lazy", "eager"].includes(val)
+  },
+  crossorigin: {
+    type: [Boolean, String],
+    default: void 0,
+    validator: (val) => ["anonymous", "use-credentials", "", true, false].includes(val)
+  },
+  decoding: {
+    type: String,
+    default: void 0,
+    validator: (val) => ["async", "auto", "sync"].includes(val)
+  },
+  // csp
+  nonce: { type: [String], default: void 0 }
+};
+const useBaseImage = (props) => {
+  const options = computed(() => {
+    return {
+      provider: props.provider,
+      preset: props.preset
+    };
+  });
+  const attrs = computed(() => {
+    return {
+      width: parseSize(props.width),
+      height: parseSize(props.height),
+      alt: props.alt,
+      referrerpolicy: props.referrerpolicy,
+      usemap: props.usemap,
+      longdesc: props.longdesc,
+      ismap: props.ismap,
+      crossorigin: props.crossorigin === true ? "anonymous" : props.crossorigin || void 0,
+      loading: props.loading,
+      decoding: props.decoding,
+      nonce: props.nonce
+    };
+  });
+  const $img = useImage();
+  const modifiers = computed(() => {
+    return {
+      ...props.modifiers,
+      width: parseSize(props.width),
+      height: parseSize(props.height),
+      format: props.format,
+      quality: props.quality || $img.options.quality,
+      background: props.background,
+      fit: props.fit
+    };
+  });
+  return {
+    options,
+    attrs,
+    modifiers
+  };
+};
+const imgProps = {
+  ...baseImageProps,
+  placeholder: { type: [Boolean, String, Number, Array], default: void 0 }
+};
+const __nuxt_component_0$2 = defineComponent({
+  name: "NuxtImg",
+  props: imgProps,
+  emits: ["load", "error"],
+  setup: (props, ctx) => {
+    const $img = useImage();
+    const _base = useBaseImage(props);
+    const placeholderLoaded = ref(false);
+    const sizes = computed(() => $img.getSizes(props.src, {
+      ..._base.options.value,
+      sizes: props.sizes,
+      densities: props.densities,
+      modifiers: {
+        ..._base.modifiers.value,
+        width: parseSize(props.width),
+        height: parseSize(props.height)
+      }
+    }));
+    const attrs = computed(() => {
+      const attrs2 = { ..._base.attrs.value, "data-nuxt-img": "" };
+      if (!props.placeholder || placeholderLoaded.value) {
+        attrs2.sizes = sizes.value.sizes;
+        attrs2.srcset = sizes.value.srcset;
+      }
+      return attrs2;
+    });
+    const placeholder = computed(() => {
+      let placeholder2 = props.placeholder;
+      if (placeholder2 === "") {
+        placeholder2 = true;
+      }
+      if (!placeholder2 || placeholderLoaded.value) {
+        return false;
+      }
+      if (typeof placeholder2 === "string") {
+        return placeholder2;
+      }
+      const size = Array.isArray(placeholder2) ? placeholder2 : typeof placeholder2 === "number" ? [placeholder2, placeholder2] : [10, 10];
+      return $img(props.src, {
+        ..._base.modifiers.value,
+        width: size[0],
+        height: size[1],
+        quality: size[2] || 50,
+        blur: size[3] || 3
+      }, _base.options.value);
+    });
+    const mainSrc = computed(
+      () => props.sizes ? sizes.value.src : $img(props.src, _base.modifiers.value, _base.options.value)
+    );
+    const src = computed(() => placeholder.value ? placeholder.value : mainSrc.value);
+    if (props.preload) {
+      const isResponsive = Object.values(sizes.value).every((v) => v);
+      useHead({
+        link: [{
+          rel: "preload",
+          as: "image",
+          nonce: props.nonce,
+          ...!isResponsive ? { href: src.value } : {
+            href: sizes.value.src,
+            imagesizes: sizes.value.sizes,
+            imagesrcset: sizes.value.srcset
+          }
+        }]
+      });
+    }
+    {
+      prerenderStaticImages(src.value, sizes.value.srcset);
+    }
+    const imgEl = ref();
+    const nuxtApp = /* @__PURE__ */ useNuxtApp();
+    nuxtApp.isHydrating;
+    return () => h("img", {
+      ref: imgEl,
+      src: src.value,
+      ...{ onerror: "this.setAttribute('data-error', 1)" },
+      ...attrs.value,
+      ...ctx.attrs
+    });
+  }
+});
 const firstNonUndefined = (...args) => args.find((arg) => arg !== void 0);
 // @__NO_SIDE_EFFECTS__
 function defineNuxtLink(options) {
@@ -1132,33 +1795,66 @@ function applyTrailingSlashBehavior(to, trailingSlash) {
   }
   return normalizeFn(to, true);
 }
-const _imports_0$1 = publicAssetsURL("/img/header/logo.svg");
-const _imports_1$1 = publicAssetsURL("/img/header/mobile.svg");
-const _imports_2 = publicAssetsURL("/img/header/mail.svg");
 const _sfc_main$4 = {
   __name: "AppHeader",
   __ssrInlineRender: true,
   setup(__props) {
     const links = [
-      { name: "Főoldal", path: "/" },
-      { name: "Partnerek", path: "/partnerek" },
-      { name: "Szolgáltatások", path: "/szolgaltatasok" },
-      { name: "Dokumentumok", path: "/dokumentumok" },
-      { name: "Ajánlatkérés", path: "/ajanlatkeres" },
-      { name: "Kapcsolat", path: "/kapcsolat" },
-      { name: "Facebook", path: "/", imagePath: "/img/header/facebook.svg" }
+      { name: "FÜGGÖNY", path: "/" },
+      { name: "LAKÁSTEXTIL", path: "/lakastextil" },
+      { name: "SÖTÉTÍTŐ", path: "/sotetito" },
+      { name: "RÖVIDÁRÚ", path: "/rovidaru" },
+      { name: "DEKORÁCIÓ", path: "/dekoracio" },
+      { name: "AKCIÓK", path: "/akciok" },
+      { name: "KAPCSOLAT", path: "/kapcsolat" }
     ];
     const isMenuOpen = ref(false);
     return (_ctx, _push, _parent, _attrs) => {
+      const _component_NuxtImg = __nuxt_component_0$2;
       const _component_NuxtLink = __nuxt_component_0$1;
-      _push(`<header${ssrRenderAttrs(mergeProps({ class: "header" }, _attrs))}><div class="header-content d-flex"><div class="logo-box header-content__logo-box"><a href="/" class="header-content__logo-box__link"><img${ssrRenderAttr("src", _imports_0$1)} alt="Biztos Alkuszom" class="header-content__logo-box__link__img"></a></div><div class="nav-box header-content__nav-box d-flex"><button class="${ssrRenderClass([{ open: unref(isMenuOpen) }, "hamburger"])}"><div class="bar"></div><div class="bar"></div><div class="bar"></div></button><nav class="${ssrRenderClass({ "menu--open": unref(isMenuOpen), menu: true })}" id="menu"><ul id="menu__list" class="menu__list d-flex"><!--[-->`);
+      _push(`<header${ssrRenderAttrs(mergeProps({ class: "header" }, _attrs))}><div class="header__up-box"><a class="header__up-box__link header__up-box__link--margin f-400" href="tel:+36704266794">`);
+      _push(ssrRenderComponent(_component_NuxtImg, {
+        class: "header__up-box__link__img",
+        src: "/img/header/mobile.svg",
+        alt: "Függöny Oázis"
+      }, null, _parent));
+      _push(` +36 70 426 67 94 </a><a class="header__up-box__link f-400" href="mailto:fuggonyoazis@gmail.com">`);
+      _push(ssrRenderComponent(_component_NuxtImg, {
+        class: "header__up-box__link__img",
+        src: "/img/header/mail.svg",
+        alt: "Függöny Oázis"
+      }, null, _parent));
+      _push(` fuggonyoazis@gmail.com </a></div><div class="header-logo-user-box grid-3"><div class="header-logo-user-box__img-box">`);
+      _push(ssrRenderComponent(_component_NuxtImg, {
+        class: "header-logo-user-box__img-box__img",
+        src: "/img/header/logo.svg",
+        alt: "Függöny Oázis"
+      }, null, _parent));
+      _push(`</div><div class="header-logo-user-box__search-box position-relative">`);
+      _push(ssrRenderComponent(_component_NuxtImg, {
+        class: "header-logo-user-box__search-box__img position-absolute",
+        src: "/img/header/search.svg",
+        alt: "Függöny Oázis"
+      }, null, _parent));
+      _push(`<input class="header-logo-user-box__search-box__input" placeholder="Keresés a termékek között"></div><div class="header-logo-user-box__login-box t-end"><a class="header-logo-user-box__login-box__link" href="#"> Bejelentkezés `);
+      _push(ssrRenderComponent(_component_NuxtImg, {
+        class: "header-logo-user-box__login-box__link__img position-relative",
+        src: "/img/header/user.svg",
+        alt: "Függöny Oázis"
+      }, null, _parent));
+      _push(`</a><a class="header-logo-user-box__login-box__link header-logo-user-box__login-box__link--margin f-600" href="#"> 13 `);
+      _push(ssrRenderComponent(_component_NuxtImg, {
+        class: "header-logo-user-box__login-box__link__img header-logo-user-box__login-box__link__img--format position-relative",
+        src: "/img/header/basket.svg",
+        alt: "Függöny Oázis"
+      }, null, _parent));
+      _push(`</a></div></div><div class="header-content"><div class="nav-box header-content__nav-box"><button class="${ssrRenderClass([{ open: unref(isMenuOpen) }, "hamburger"])}"><div class="bar"></div><div class="bar"></div><div class="bar"></div></button><nav class="${ssrRenderClass({ "menu--open": unref(isMenuOpen), menu: true })}" id="menu"><ul id="menu__list" class="menu__list d-flex"><!--[-->`);
       ssrRenderList(links, (link) => {
         _push(`<li class="menu__list__li">`);
         _push(ssrRenderComponent(_component_NuxtLink, {
           to: link.path,
           class: [
-            "menu__item text-color text-transform-uppercase",
-            { "menu__item--border-left": link.path === "/" }
+            "menu__item text-color text-transform-uppercase f-500"
           ]
         }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -1185,7 +1881,7 @@ const _sfc_main$4 = {
         }, _parent));
         _push(`</li>`);
       });
-      _push(`<!--]--></ul></nav></div></div><div class="header-bottom d-flex"><div class="header-bottom__div"><h1 class="header-bottom__div__h1 text-color-w text-transform-uppercase"> ÁGOSTON GÁBOR - <span class="header-bottom__div__span">Az Ön alkusza</span></h1></div><div class="header-bottom__div header-bottom__div-linkbox"><a href="tel:+36302345866" class="header-bottom__div-linkbox__link text-color-w"><img${ssrRenderAttr("src", _imports_1$1)} alt="Biztos Alkuszom" class="header-bottom__div-linkbox__link__img position-relative"> 06 30 234 5866 </a><a href="mailto:biztos@alkuszom.info" class="header-bottom__div-linkbox__link text-color-w"><img${ssrRenderAttr("src", _imports_2)} alt="Biztos Alkuszom" class="header-bottom__div-linkbox__link__img header-bottom__div-linkbox__link__img--margin-left position-relative"> biztos@alkuszom.info </a></div></div></header>`);
+      _push(`<!--]--></ul></nav></div></div></header>`);
     };
   }
 };
@@ -1335,75 +2031,6 @@ function hasChildrenRoutes(fork, newRoute, Component) {
   });
   return index < newRoute.matched.length - 1;
 }
-const _imports_0 = publicAssetsURL("/img/btn-arrow.svg");
-const _imports_1 = publicAssetsURL("/img/footer/logo.svg");
-const _sfc_main$3 = {
-  __name: "AppFooter",
-  __ssrInlineRender: true,
-  setup(__props) {
-    const links = [
-      { name: "Főoldal", path: "/" },
-      { name: "Partnerek", path: "/partnerek" },
-      { name: "Szolgáltatások", path: "/szolgaltatasok" },
-      { name: "Dokumentumok", path: "/dokumentumok" },
-      { name: "Ajánlatkérés", path: "/ajanlatkeres" },
-      { name: "Kapcsolat", path: "/kapcsolat" }
-    ];
-    const form = ref({
-      firstname: "",
-      lastname: "",
-      email: "",
-      phonenumber: "",
-      message: ""
-    });
-    return (_ctx, _push, _parent, _attrs) => {
-      const _component_NuxtLink = __nuxt_component_0$1;
-      _push(`<footer${ssrRenderAttrs(_attrs)}><div class="footer-content"><div class="footer-content__form bg-color-w"><h5 class="footer-content__form__h5 text-transform-uppercase text-center"> VEGYÜK FEL A KAPCSOLATOT! </h5><div class="contact-form"><form><div class="contact-form__grid-box grid-2"><div class="form-group form-group--margin-right"><input class="form-group__input" placeholder="Vezetéknév *" type="text" id="firstname"${ssrRenderAttr("value", unref(form).firstname)} required></div><div class="form-group form-group--margin-left"><input class="form-group__input" placeholder="Keresztnév *" type="text" id="lastname"${ssrRenderAttr("value", unref(form).lastname)} required></div></div><div class="contact-form__grid-box grid-2"><div class="form-group form-group--margin-right"><input class="form-group__input" placeholder="E-mail cím *" type="email" id="email"${ssrRenderAttr("value", unref(form).email)} required></div><div class="form-group form-group--margin-left"><input class="form-group__input" placeholder="Telefonszám" type="text" id="phonenumber"${ssrRenderAttr("value", unref(form).phonenumber)} required></div></div><div class="form-group"><textarea class="form-group__textarea" placeholder="Milyen segítségre volna szüksége?" id="message" required>${ssrInterpolate(unref(form).message)}</textarea></div><div class="contact-form__btn-box t-end"><button class="page-btn text-color-w" type="submit"> Küldés <img class="page-btn__img position-relative"${ssrRenderAttr("src", _imports_0)} alt="Biztos Alkuszom"></button></div></form></div></div><div class="footer-content__link-box text-center"><img${ssrRenderAttr("src", _imports_1)} alt="Biztos Alkuszom" class="footer-content__link-box__img"><div class="footer-content__link-box__links d-flex"><!--[-->`);
-      ssrRenderList(links, (link) => {
-        _push(ssrRenderComponent(_component_NuxtLink, {
-          key: link.path,
-          to: link.path,
-          class: "footer-link"
-        }, {
-          default: withCtx((_, _push2, _parent2, _scopeId) => {
-            if (_push2) {
-              _push2(`${ssrInterpolate(link.name)}`);
-            } else {
-              return [
-                createTextVNode(toDisplayString(link.name), 1)
-              ];
-            }
-          }),
-          _: 2
-        }, _parent));
-      });
-      _push(`<!--]--></div><div class="footer-content__link-box__DigitalSeed bg-color-w">`);
-      _push(ssrRenderComponent(_component_NuxtLink, {
-        class: "footer-content__link-box__DigitalSeed__Nuxtlink text-transform-uppercase",
-        to: "/"
-      }, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            _push2(` DIGITAL SEED STUDIO - 2024`);
-          } else {
-            return [
-              createTextVNode(" DIGITAL SEED STUDIO - 2024")
-            ];
-          }
-        }),
-        _: 1
-      }, _parent));
-      _push(`</div></div></div></footer>`);
-    };
-  }
-};
-const _sfc_setup$3 = _sfc_main$3.setup;
-_sfc_main$3.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/AppFooter.vue");
-  return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
-};
-const __nuxt_component_2 = _sfc_main$3;
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -1411,6 +2038,205 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
+const _sfc_main$3 = {};
+function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
+  const _component_NuxtLink = __nuxt_component_0$1;
+  const _component_NuxtImg = __nuxt_component_0$2;
+  _push(`<footer${ssrRenderAttrs(_attrs)}><div class="footer-content grid-4"><div class="footer-content__link-box"><h6 class="footer-content__link-box__h6 text-color">MENÜ</h6><p class="footer-content__link-box__p">`);
+  _push(ssrRenderComponent(_component_NuxtLink, { class: "footer-content__link-box__NuxtLink text-color" }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`TERMÉKEK`);
+      } else {
+        return [
+          createTextVNode("TERMÉKEK")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</p><p class="footer-content__link-box__p">`);
+  _push(ssrRenderComponent(_component_NuxtLink, { class: "footer-content__link-box__NuxtLink text-color" }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`BELÉPÉS`);
+      } else {
+        return [
+          createTextVNode("BELÉPÉS")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</p><p class="footer-content__link-box__p">`);
+  _push(ssrRenderComponent(_component_NuxtLink, { class: "footer-content__link-box__NuxtLink text-color" }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`REGISZTRÁCIÓ`);
+      } else {
+        return [
+          createTextVNode("REGISZTRÁCIÓ")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</p><p class="footer-content__link-box__p">`);
+  _push(ssrRenderComponent(_component_NuxtLink, { class: "footer-content__link-box__NuxtLink text-color" }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`PROFILOM`);
+      } else {
+        return [
+          createTextVNode("PROFILOM")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</p><p class="footer-content__link-box__p">`);
+  _push(ssrRenderComponent(_component_NuxtLink, { class: "footer-content__link-box__NuxtLink text-color" }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`KOSÁR`);
+      } else {
+        return [
+          createTextVNode("KOSÁR")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</p><p class="footer-content__link-box__p">`);
+  _push(ssrRenderComponent(_component_NuxtLink, { class: "footer-content__link-box__NuxtLink text-color" }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`PROFILOM`);
+      } else {
+        return [
+          createTextVNode("PROFILOM")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</p></div><div class="footer-content__link-box footer-content__link-box--one-formating"><h6 class="footer-content__link-box__h6 text-color">INFORMÁCIÓK</h6><p class="footer-content__link-box__p">`);
+  _push(ssrRenderComponent(_component_NuxtLink, { class: "footer-content__link-box__NuxtLink text-color" }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`ÁLTALÁNOS SZERZŐDÉSI FELTÉTELEK`);
+      } else {
+        return [
+          createTextVNode("ÁLTALÁNOS SZERZŐDÉSI FELTÉTELEK")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</p><p class="footer-content__link-box__p">`);
+  _push(ssrRenderComponent(_component_NuxtLink, { class: "footer-content__link-box__NuxtLink text-color" }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`ADATKEZELÉSI TÁJÉKOZTATÓ`);
+      } else {
+        return [
+          createTextVNode("ADATKEZELÉSI TÁJÉKOZTATÓ")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</p><p class="footer-content__link-box__p">`);
+  _push(ssrRenderComponent(_component_NuxtLink, { class: "footer-content__link-box__NuxtLink text-color" }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`FIZETÉS`);
+      } else {
+        return [
+          createTextVNode("FIZETÉS")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</p><p class="footer-content__link-box__p">`);
+  _push(ssrRenderComponent(_component_NuxtLink, { class: "footer-content__link-box__NuxtLink text-color" }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`SZÁLLÍTÁS`);
+      } else {
+        return [
+          createTextVNode("SZÁLLÍTÁS")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</p><p class="footer-content__link-box__p">`);
+  _push(ssrRenderComponent(_component_NuxtLink, { class: "footer-content__link-box__NuxtLink text-color" }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`GYAKRAN ISMÉTELT KÉRDÉSEK`);
+      } else {
+        return [
+          createTextVNode("GYAKRAN ISMÉTELT KÉRDÉSEK")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</p><p class="footer-content__link-box__p">`);
+  _push(ssrRenderComponent(_component_NuxtLink, { class: "footer-content__link-box__NuxtLink text-color" }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`ELÉRHETŐSÉGEK`);
+      } else {
+        return [
+          createTextVNode("ELÉRHETŐSÉGEK")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</p></div><div class="footer-content__link-box footer-content__link-box--two-formating"><h6 class="footer-content__link-box__h6 footer-content__link-box__h6--margin text-color"> ELÉRHETŐSÉG </h6><p class="footer-content__link-box__p"><a href="tel:+36704266794" class="footer-content__link-box__link text-color">`);
+  _push(ssrRenderComponent(_component_NuxtImg, {
+    class: "footer-content__link-box__link__img",
+    src: "/img/footer/mobile.svg",
+    alt: "Függöny Oázis"
+  }, null, _parent));
+  _push(` +36 70 426 67 94</a></p><p class="footer-content__link-box__p text-color">`);
+  _push(ssrRenderComponent(_component_NuxtImg, {
+    class: "footer-content__link-box__link__img",
+    src: "/img/footer/time.svg",
+    alt: "Függöny Oázis"
+  }, null, _parent));
+  _push(` Telefonos ügyfélszolgálat: Munkanapokon 8:00 - 17:00 </p><p class="footer-content__link-box__p"><a href="mailto:fuggonyoazis@gmail.com" class="footer-content__link-box__link text-color">`);
+  _push(ssrRenderComponent(_component_NuxtImg, {
+    class: "footer-content__link-box__link__img",
+    src: "/img/footer/mail.svg",
+    alt: "Függöny Oázis"
+  }, null, _parent));
+  _push(` fuggonyoazis@gmail.com</a></p></div><div class="footer-content__img-content d-flex">`);
+  _push(ssrRenderComponent(_component_NuxtImg, {
+    class: "footer-content__img-content__img",
+    src: "img/header/logo.svg",
+    alt: "Függöny Oázis"
+  }, null, _parent));
+  _push(`</div></div><div class="copyright-content">`);
+  _push(ssrRenderComponent(_component_NuxtImg, {
+    class: "copyright-content__img",
+    src: "img/footer/digitalSeed.svg",
+    alt: "Függöny Oázis"
+  }, null, _parent));
+  _push(`</div></footer>`);
+}
+const _sfc_setup$3 = _sfc_main$3.setup;
+_sfc_main$3.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/AppFooter.vue");
+  return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
+};
+const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender$1]]);
 const _sfc_main$2 = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_AppHeader = __nuxt_component_0;
@@ -1450,8 +2276,8 @@ const _sfc_main$1 = {
     const statusMessage = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-_Zcc09Ul.mjs').then((r) => r.default || r));
-    const _Error = defineAsyncComponent(() => import('./error-500-C5KVGc-h.mjs').then((r) => r.default || r));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-6CF4PctI.mjs').then((r) => r.default || r));
+    const _Error = defineAsyncComponent(() => import('./error-500-aSchvzQ9.mjs').then((r) => r.default || r));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(unref(ErrorTemplate), mergeProps({ statusCode: unref(statusCode), statusMessage: unref(statusMessage), description: unref(description), stack: unref(stack) }, _attrs), null, _parent));
@@ -1531,5 +2357,5 @@ let entry;
 }
 const entry$1 = (ssrContext) => entry(ssrContext);
 
-export { _export_sfc as _, __nuxt_component_0$1 as a, entry$1 as default, injectHead as i, publicAssetsURL as p, resolveUnrefHeadInput as r };
+export { _export_sfc as _, __nuxt_component_0$1 as a, __nuxt_component_0$2 as b, entry$1 as default, useHead as u };
 //# sourceMappingURL=server.mjs.map

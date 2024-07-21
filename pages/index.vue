@@ -497,11 +497,6 @@ const currentIndex = ref<number | null>(null)
                 >
                   Tovább olvasok
                 </NuxtLink>
-                <NuxtImg
-                  class="blog-content__img-text-box__div__link-box__NuxtLink__img"
-                  src="/img/blog/blog-a-right.svg"
-                  alt="Függöny Oázis"
-                />
               </div>
             </div>
           </div>

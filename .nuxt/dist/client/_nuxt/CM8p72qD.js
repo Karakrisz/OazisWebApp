@@ -1,1 +1,0 @@
-import{c as t,b as o,w as a,a as s,e as n,o as c,d as _}from"./DI2AV8va.js";import{u}from"./CM3Yo3QC.js";const m={class:"kapcsolat"},r=s("h2",null,"Dokumentumok",-1),x={__name:"dokumentumok",setup(d){return u({title:"Dokumentumok"}),(l,i)=>{const e=n;return c(),t("div",m,[r,o(e,{to:"/"},{default:a(()=>[_("Vissza a Főoldalra")]),_:1})])}}};export{x as default};

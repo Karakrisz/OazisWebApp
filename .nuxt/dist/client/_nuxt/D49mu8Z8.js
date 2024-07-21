@@ -1,0 +1,1 @@
+import{u as t,c as s,o,a as e}from"./B2DW7t4l.js";const a={class:"supage-content position-relative"},c=e("h2",{class:"supage-content__h2"},"DEKORÁCIÓ",-1),_=e("p",null,"feltöltés alatt...",-1),n=[c,_],d={__name:"dekoracio",setup(l){return t({title:"DEKORÁCIÓ"}),(i,r)=>(o(),s("div",a,n))}};export{d as default};

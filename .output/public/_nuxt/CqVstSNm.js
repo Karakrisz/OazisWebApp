@@ -1,0 +1,1 @@
+import{u as e,c as s,o,a as t}from"./B2DW7t4l.js";const a={class:"supage-content position-relative"},c=t("h2",{class:"supage-content__h2"},"RÖVIDÁRÚ",-1),_=t("p",null,"feltöltés alatt...",-1),n=[c,_],u={__name:"rovidaru",setup(l){return e({title:"RÖVIDÁRÚ"}),(r,i)=>(o(),s("div",a,n))}};export{u as default};

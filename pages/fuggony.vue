@@ -5,9 +5,8 @@ useHead({
 </script>
 
 <template>
-  <div>
-    <h2>Függöny</h2>
-    <NuxtLink to="/">Vissza a Főoldalra</NuxtLink>
+  <div class="supage-content position-relative">
+    <h2 class="supage-content__h2">FÜGGÖNY</h2>
+    <p>feltöltés alatt...</p>
   </div>
 </template>
-
